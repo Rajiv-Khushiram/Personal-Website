@@ -1,0 +1,36 @@
+[debug] [2019-11-06T20:32:48.565Z] ----------------------------------------------------------------------
+[debug] [2019-11-06T20:32:48.567Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Rajiv\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions,firestore
+[debug] [2019-11-06T20:32:48.567Z] CLI Version:   7.6.2
+[debug] [2019-11-06T20:32:48.567Z] Platform:      win32
+[debug] [2019-11-06T20:32:48.567Z] Node Version:  v10.16.0
+[debug] [2019-11-06T20:32:48.568Z] Time:          Thu Nov 07 2019 07:32:48 GMT+1100 (Australian Eastern Daylight Time)
+[debug] [2019-11-06T20:32:48.569Z] ----------------------------------------------------------------------
+[debug] [2019-11-06T20:32:48.569Z] 
+[info] i  Starting emulators: ["functions","firestore"]
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  firestore: Serving ALL traffic (including WebChannel) on http://localhost:8080
+[warn] !  firestore: Support for WebChannel on a separate port (8081) is DEPRECATED and will go away soon. Please use port above instead.
+[debug] [2019-11-06T20:32:53.153Z] Ignoring unsupported arg: projectId
+[debug] [2019-11-06T20:32:53.153Z] Ignoring unsupported arg: auto_download
+[debug] [2019-11-06T20:32:53.153Z] Starting emulator firestore with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\Rajiv\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.9.0.jar","--host","localhost","--port",8080,"--rules","C:\\Users\\Rajiv\\Documents\\GitHub\\Personal-Website\\firestore.rules","--functions_emulator","localhost:5001","--webchannel_port",8081],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator"]}
+[info] i  firestore: Emulator logging to firestore-debug.log
+[debug] [2019-11-06T20:32:55.588Z] API endpoint: http://localhost
+[debug] [2019-11-06T20:32:55.588Z] :8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8080
+
+Dev App Server is now running.
+
+
+[info] +  firestore: Emulator started at http://localhost:8080
+[info] i  firestore: For testing set FIRESTORE_EMULATOR_HOST=localhost:8080
+[info] i  functions: Watching "C:\Users\Rajiv\Documents\GitHub\Personal-Website\functions" for Cloud Functions...
+[debug] [2019-11-06T20:32:55.980Z] [worker-~diagnostic~-1b90aa08-fb32-4c26-996e-9de31452c427]: BUSY
+[debug] [2019-11-06T20:32:56.485Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Rajiv\\Documents\\GitHub\\Personal-Website\\functions","node_version":"10.16.0"}
+[debug] [2019-11-06T20:32:56.487Z] [runtime-status] Disabled runtime features: undefined {}
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-11-06T20:32:56.509Z] [worker-~diagnostic~-1b90aa08-fb32-4c26-996e-9de31452c427]: exited
+[debug] [2019-11-06T20:32:56.509Z] [worker-~diagnostic~-1b90aa08-fb32-4c26-996e-9de31452c427]: FINISHED

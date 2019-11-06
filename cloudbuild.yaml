@@ -22,4 +22,4 @@ steps:
 
 
 - name: 'gcr.io/raj-c-k/firebase'
-  args: [deploy, --only, hosting:production] 
+  args: [deploy, --debug] 
