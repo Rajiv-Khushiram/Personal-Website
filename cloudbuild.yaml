@@ -17,6 +17,9 @@ steps:
 - name: 'gcr.io/raj-c-k/firebase'
   args: [use, default] 
 
+- name: 'gcr.io/raj-c-k/functions/npm'
+  args: ['install']
+
 - name: 'gcr.io/raj-c-k/firebase'
   args: [target:apply, hosting, production, raj-c-k] 
 
