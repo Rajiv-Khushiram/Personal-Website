@@ -17,7 +17,8 @@ steps:
 - name: 'gcr.io/raj-c-k/firebase'
   args: [use, default] 
 
-- name: 'gcr.io/raj-c-k/functions/npm'
+- name: 'gcr.io/cloud-builders/npm'
+  dir: 'functions'
   args: ['install']
 
 - name: 'gcr.io/raj-c-k/firebase'
