@@ -1,0 +1,16 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run','build']  
+
+- name: 'gcr.io/raj-c-k/firebase'
+  args: [use, default] 
+
+- name: 'gcr.io/raj-c-k/firebase'
+  args: [target:apply, hosting, production, raj-c-k] 
+
+
+- name: 'gcr.io/raj-c-k/firebase'
+  args: [deploy, --only, hosting:production] 
