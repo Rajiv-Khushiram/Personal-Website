@@ -1,0 +1,37 @@
+# command to install modules
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+
+# command to build project and build folder
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run','build'] 
+  env: ['REACT_APP_FIREBASE_KEY=${_REACT_APP_FIREBASE_KEY}',
+        'REACT_APP_FIREBASE_DOMAIN=${_REACT_APP_FIREBASE_DOMAIN}',
+        'REACT_APP_FIREBASE_DATABASE=${_REACT_APP_FIREBASE_DATABASE}',
+        'REACT_APP_FIREBASE_PROJECT_ID=${_REACT_APP_FIREBASE_PROJECT_ID}',
+        'REACT_APP_FIREBASE_STORAGE_BUCKET=${_REACT_APP_FIREBASE_STORAGE_BUCKET}',
+        'REACT_APP_FIREBASE_SENDER_ID=${_REACT_APP_FIREBASE_SENDER_ID}',
+        'REACT_APP_FIREBASE_APP_ID=${_REACT_APP_FIREBASE_APP_ID}',    
+        'REACT_APP_FIREBASE_MEASUREMENT_ID=${_REACT_APP_FIREBASE_MEASUREMENT_ID}',
+] 
+
+- name: 'gcr.io/raj-c-k/firebase'
+  args: [use, default] 
+
+# Install function moduless
+- name: 'gcr.io/cloud-builders/npm'
+  dir: 'functions'
+  args: ['install']
+
+# Target hosting site rajiv-c-k
+- name: 'gcr.io/raj-c-k/firebase'
+  args: [target:apply, hosting, staging, rajiv-c-k] 
+
+# Deploy hosting to staging branch
+- name: 'gcr.io/raj-c-k/firebase'
+  args: [deploy, --only, hosting:staging] 
+
+# Deploy functions from staging branch
+- name: 'gcr.io/raj-c-k/firebase'
+  args: [deploy, --only, functions] 
