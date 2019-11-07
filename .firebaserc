@@ -3,7 +3,7 @@
     "default": "raj-c-k"
   },
   "targets": {
-    "autoreviews": {
+    "raj-c-k": {
       "hosting": {
         "production": [
           "raj-c-k"
