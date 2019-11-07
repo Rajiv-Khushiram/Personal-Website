@@ -6,7 +6,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="dashboard container">
-                <h1>Card</h1>
+                <h1>Rajiv Khushiram</h1>
                 <div className="row">
                     <div className="col s12 m6">
                         <ProjectList/>
