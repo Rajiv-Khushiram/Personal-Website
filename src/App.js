@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Navbar from './components/layout/Navbar'
-import Dashboard from './components/dashboard/Dashboard'
-import ProjectDetails from './components/projects/ProjectDetails'
-import SignIn from './components/auth/SignIn'
-import { composeWithDevTools } from 'redux-devtools-extension';
-
-
+import logo from './logo.svg';
 import { Provider } from 'react-redux'
 import firebase from 'firebase/app'
 import 'firebase/auth'
@@ -18,6 +10,14 @@ import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 import { createFirestoreInstance } from 'redux-firestore';
 import configureStore from './store'
 import { firebase as fbConfig, reduxFirebase as rfConfig } from './config'
+
+import Navbar from './components/layout/Navbar'
+import Dashboard from './components/dashboard/Dashboard'
+import ProjectDetails from './components/projects/ProjectDetails'
+import SignIn from './components/auth/SignIn'
+
+
+
 import './App.css'
 
 
