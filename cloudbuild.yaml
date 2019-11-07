@@ -24,6 +24,6 @@ steps:
 - name: 'gcr.io/raj-c-k/firebase'
   args: [target:apply, hosting, production, raj-c-k] 
 
-
+# will not be overwritten
 - name: 'gcr.io/raj-c-k/firebase'
   args: [deploy, --debug] 
