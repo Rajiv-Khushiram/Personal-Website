@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "raj-c-k"
+  },
+  "targets": {
+    "autoreviews": {
+      "hosting": {
+        "production": [
+          "raj-c-k"
+        ],
+        "staging": [
+          "rajiv-c-k"
+        ]
+      }
+    }
   }
 }
