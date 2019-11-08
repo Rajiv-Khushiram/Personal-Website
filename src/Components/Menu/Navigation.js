@@ -55,6 +55,7 @@ const Navigation = props => (
     <TabItem to="about" text="About" icon="address-card" />
     <TabItem to="skillset" text="Skills Set" icon="superpowers" />
     <TabItem to="projects" text="Projects" icon="folder" />
+    <a target="_blank" href="https://drive.google.com/open?id=1nNCsi9VEjvJ-JDMr0ZgwqAy5tVi3EaLE" ><Tab style={{color:'white'}}>Resume<i class="fa fa-folder"></i></Tab></a>
     {/* <TabItem to="contact" text="Contact" icon="phone" /> */}
   </Wrapper>
 );
