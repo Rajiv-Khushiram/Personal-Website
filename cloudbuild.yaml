@@ -1,7 +1,9 @@
+# command to install modules
 steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 
+# command to build project and build folder
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run','build'] 
   env: ['REACT_APP_FIREBASE_KEY=${_REACT_APP_FIREBASE_KEY}',
@@ -17,13 +19,19 @@ steps:
 - name: 'gcr.io/raj-c-k/firebase'
   args: [use, default] 
 
+# Install function moduless
 - name: 'gcr.io/cloud-builders/npm'
   dir: 'functions'
   args: ['install']
 
+# Target hosting site rajiv-c-k
 - name: 'gcr.io/raj-c-k/firebase'
-  args: [target:apply, hosting, production, raj-c-k] 
+  args: [target:apply, hosting, staging, rajiv-c-k] 
 
-# will not be overwrittenyea
+# Deploy hosting to staging branch
 - name: 'gcr.io/raj-c-k/firebase'
-  args: [deploy, --debug] 
+  args: [deploy, --only, hosting:staging] 
+
+# Deploy functions from staging branch
+- name: 'gcr.io/raj-c-k/firebase'
+  args: [deploy, --only, functions] 
