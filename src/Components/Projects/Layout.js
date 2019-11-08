@@ -17,28 +17,28 @@ const Projects = [
   {
     title: 'Hackathon 2019',
     description:
-      `A prototype for grouping students in team projects`,
+      `A prototype for grouping students in team projects. This project stacks React-Mongo-Db and hosting`,
     link: 'https://reactrkfirebasegcp.firebaseapp.com',
     githublink: 'https://github.com/Rajiv-Khushiram/reactrk'
   },
   {
     title: 'Google Business Reviews-Project',
     description:
-      'A project which engages customers in submitting a reviews to generate customer trust',
+      'A prototype project which engages customers in submitting a reviews to generate customer trust and which went into commercial use',
     link: 'https://rajivkhushiram-reviews-project.firebaseapp.com/',
     githublink: 'https://github.com/Rajiv-Khushiram/Reviews-App-For-Business'
   },
   {
-    title: 'First Porfolio',
+    title: 'React-Particles.JS Portfolio',
     description:
-      "A demo of my first Portfolio page",
+      "An Porfolio Project with Particles JS, React and Firebase hosting",
     link: 'https://rajivkhushiram.com',
     githublink:'https://github.com/Rajiv-Khushiram/rktechnologies'
   },
   {
     title: 'Enhanced Porfolio',
     description:
-      'This website :) ',
+      'This website plugged with React-Redux-Firebase V3 with CI/CD with Cloud Build',
     link: 'https://raj-c-k.web.app',
     githublink:'https://github.com/Rajiv-Khushiram/Personal-Website'
   },
@@ -51,7 +51,7 @@ const Projects = [
   {
     title: 'RSA Encryption Prototype',
     description:
-      "A prototype of RSA encryption on server and client level",
+      "A prototype of RSA encryption on server and client level. Illustrates E-commerce / Cart addition encryption including Digital Envelopes generation",
       githublink: 'https://github.com/Rajiv-Khushiram/RSA_Encryption-with-PHP-and-JavaScript',
   },
 ];
