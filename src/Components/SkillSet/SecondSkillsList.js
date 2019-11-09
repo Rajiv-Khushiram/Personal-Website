@@ -37,23 +37,25 @@ const Item = styled.li`
 `;
 
 const skills = [
-  'React',
-  'Redux',
-  'Nodejs',
-  'Webpack',
-  'Gulp',
-  'Express',
-  'Typescript',
+  'Java (Spring)',
+  'Python',
+  'Django',
+  'Flask',
+  'NodeJS',
+  'RESTful APIs',
+  'Security',
   'Docker',
-  'Cloud Build'
-  
-  
+  'PostgreSQL',
+  'MySQL',
+  'MongoDB',
+  'Firestore',
+  'Apache Web Servers',
 ];
 
 const SkillItems = skills.map(skill => <Item key={skill}>{skill}</Item>);
 
 const SecondSkillsList = props => (
-  <Wrapper active={props.active}>{SkillItems}</Wrapper>
+  <Wrapper active={props.active}><h1>Back-End</h1>{SkillItems}</Wrapper>
 );
 
 SecondSkillsList.propTypes = {
