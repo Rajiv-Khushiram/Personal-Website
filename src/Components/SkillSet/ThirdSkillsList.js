@@ -39,22 +39,25 @@ const Item = styled.li`
 const skills = [
   'Git',
   'CI/CD',
+  'Containers',
   'Cloud Functions',
-  'API Integrations',
-  'Linux Administration',
+  'Unix & Linux OS',
+  'Puppet',
+  'Bash Scripts',
   'Firebase',
-  'Firestore',
+  'Algolia',
   'MailJet',
   'Big Query',
   'Web Security', 
-  'GCP',
+  'Camunda BPMS',
+  'Google Cloud Platform',
   'AWS',
 ];
 
 const SkillItems = skills.map(skill => <Item key={skill}>{skill}</Item>);
 
 const ThirdSkillsList = props => (
-  <Wrapper active={props.active}>{SkillItems}</Wrapper>
+  <Wrapper active={props.active}><h1>DevOps</h1>{SkillItems}</Wrapper>
 );
 
 ThirdSkillsList.propTypes = {
