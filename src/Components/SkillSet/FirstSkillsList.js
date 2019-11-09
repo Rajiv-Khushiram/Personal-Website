@@ -26,23 +26,26 @@ const Item = styled.li`
 `;
 
 const skills = [
-  'HTML',
+  'HTML5',
   'CSS',
   'JavaScript',
-  'Java',
-  'Python',
-  'OSGI',
-  'Spring Framework',
-  'Markdown',
+  'React',
+  'Redux',
+  'JQuery',
+  'Webpack',
   'Sass',
-  'Less',
-  'OOP Design Patterns'
+  'Bootstrap',
+  'Semantic-UI',
+  'Ant-Design',
+  'Gulp',
+  'Package Managers',
+  'Typescript',
 ];
 
 const SkillItems = skills.map(skill => <Item key={skill}>{skill}</Item>);
 
 const FirstSkillsList = props => (
-  <Wrapper active={props.active}>{SkillItems}</Wrapper>
+  <Wrapper active={props.active}><h1>Front-End</h1>{SkillItems}</Wrapper>
 );
 
 FirstSkillsList.propTypes = {
