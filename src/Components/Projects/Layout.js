@@ -26,7 +26,6 @@ const Projects = [
     description:
       'A prototype project which engages customers in submitting a reviews to generate customer trust and which went into commercial use',
     link: 'https://rajivkhushiram-reviews-project.firebaseapp.com/',
-    githublink: 'https://github.com/Rajiv-Khushiram/Reviews-App-For-Business'
   },
   {
     title: 'React-Particles.JS Portfolio',
