@@ -25,8 +25,7 @@ const Paragraph = props => (
     Hello World! Captivated by the possibilities that the intersection of design and technology can bring,
     I stay awake motivated to drive meaningful levels of impact at different scales across the world.
     Always hungry to learn more about the world (or in general), I look forward in bringing my focused drive to empower
-     teams and shape the future for the greater good.
-    . You can check my{' '}
+     teams and shape the future for the greater good. You can check my{' '}
     <Link to="skillset" spy={true} smooth={true}>
       <SkillsetLink>full skills set here</SkillsetLink>
     </Link>{' '}
