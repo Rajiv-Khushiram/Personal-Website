@@ -78,9 +78,9 @@ const Card = props => (
       {props.link && (<Button href={props.link} target="_blank">
         Website
       </Button>)}
-      <Button2 href={props.githublink} target="_blank">
+      {props.githublink && (<Button2 href={props.githublink} target="_blank">
         Github
-      </Button2>
+      </Button2>)}
     </ButtonWrapper>
   </Wrapper>
 );
