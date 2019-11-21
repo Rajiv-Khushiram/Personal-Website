@@ -7,6 +7,7 @@ import { Redirect } from "react-router-dom";
 import Header from "../Header";
 import Menu from "../Menu";
 import styled from "styled-components";
+import Footer from "../Footer"
 
 const BlogSection = styled.div`
   text-align: left;
@@ -39,6 +40,7 @@ class Blog extends Component {
         <BlogSection id='about'>
           <Bloglist  blogs={blogs} />
         </BlogSection>
+       <Footer/>
       </React.Fragment>
     );
   }

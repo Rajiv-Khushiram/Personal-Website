@@ -30,7 +30,7 @@ const BlogSummary = ({ blog }) => {
     <div>
       <Box>
         <Link style={{ textDecoration:"none", color: "black" }} to={"/blog/" + blog.id} key={blog.id}>
-          <h2 style={{ fontSize: '2em ',paddingTop:"20px"}}>{blog.title}</h2>
+          <h2 style={{ fontSize: '2em ', fontWeight:'800',paddingTop:"15px"}}>{blog.title}</h2>
         </Link>
         <p style={{color:"grey", fontStyle:"italic", lineHeight:'1.7'}}>
           {moment(blog.createdAt.toDate()).calendar()}{" "}
