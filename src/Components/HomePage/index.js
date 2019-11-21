@@ -9,7 +9,7 @@ import Footer from '../Footer';
 
 const HomePage = () => (
         <div>
-          <Header />
+          <Header subtitle={"Full Stack Web Developer"}/>
           <Menu />
           <About />
           <SkillSet />

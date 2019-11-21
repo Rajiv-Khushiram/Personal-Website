@@ -12,6 +12,8 @@ import configureStore from "./store";
 import { firebase as fbConfig, reduxFirebase as rfConfig } from "./config";
 
 import HomePage from './Components/HomePage'
+import Blog from './Components/Blog'
+import BlogDetails from './Components/Blog/blogDetail'
 import "./App.css";
 
 const initialState = window && window.__INITIAL_STATE__; // set initial state here
@@ -32,6 +34,10 @@ const App = () => (
         <div className="App">
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route exact path="/blog" component={Blog} />
+            <Route exact path="/blog/:id" component={BlogDetails} />
+                        {/* <Route path="/project/:id" component={ProjectDetails} />
+
             {/* <Route exact path="/facial-Recognition-Project" component={FacialRecognitionProject} /> */}
             {/* <Route path="/project/:id" component={ProjectDetails} />
             <Route path="/signin" component={SignIn} /> */}

@@ -6,7 +6,7 @@ import SocialMediaLinks from './SocialMediaLinks';
 import AngleDown from './AngleDown';
 
 const Outer = styled.div`
-  height: 100vh;
+  height: ${props => props.blog ? "40vh" : "100vh"  };
   min-height: 400px;
   width: 100vw;
   display: flex;
@@ -23,20 +23,23 @@ const Outer = styled.div`
 `;
 
 const IconsWrapper = styled.div`
-  height: 100%;
   min-height: 400px;
   width: 100%;
   position: absolute;
   left: 0;
   top: 0;
+  height: ${props => props.iconsWrapper ? "none" : "100%"  };
 `;
 
 class Header extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       left: '0',
       top: '0',
+      blog: props.blog,
+      iconsWrapper: props.iconWrapper,
+      subtitle:props.subtitle
     };
     this.outerHovered = this.outerHovered.bind(this);
   }
@@ -45,12 +48,12 @@ class Header extends Component {
   }
   render() {
     return (
-      <Outer id="home" onMouseMove={this.outerHovered}>
-        <MainText left={this.state.left} top={this.state.top} />
-        <IconsWrapper>
+      <Outer blog={this.state.blog} id="home" onMouseMove={this.outerHovered}>
+        <MainText subtitle={this.state.subtitle} left={this.state.left} top={this.state.top} />
+        <IconsWrapper iconsWrapper={this.state.iconsWrapper}>
           <SocialMediaLinks />
           <AngleDown />
-        </IconsWrapper>
+        </IconsWrapper >
       </Outer>
     );
   }

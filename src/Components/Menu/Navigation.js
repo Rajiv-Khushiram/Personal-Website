@@ -26,6 +26,7 @@ const Tab = styled.span`
   justify-content: flex-end;
   font-size: 1.2rem;
   cursor: pointer;
+  text-decoration:none;
   transition: 0.2s;
   &:hover {
     background-color: #6978dd;
@@ -36,7 +37,7 @@ const Tab = styled.span`
 `;
 
 const TabItem = props => (
-  <Link to={props.to} spy={true} smooth={true}>
+  <Link  to={props.to} spy={true} smooth={true}>
     <Tab>
       {props.text} <i className={`fa fa-${props.icon}`} />
     </Tab>
@@ -55,7 +56,9 @@ const Navigation = props => (
     <TabItem to="about" text="About" icon="address-card" />
     <TabItem to="skillset" text="Skills Set" icon="superpowers" />
     <TabItem to="projects" text="Projects" icon="folder" />
-    <a target="_blank" href="https://drive.google.com/open?id=1u9sxWP8irGfc_1v7FVGojRtLZ6WCWMJr" ><Tab style={{color:'white'}}>Resume<i className="fa fa-folder"></i></Tab></a>
+    <a target="_blank" href="https://drive.google.com/open?id=1u9sxWP8irGfc_1v7FVGojRtLZ6WCWMJr" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
+    {/* <a target="_blank" href="https://raj-c-k.web.app/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a> */}
+
     {/* <TabItem to="contact" text="Contact" icon="phone" /> */}
   </Wrapper>
 );
