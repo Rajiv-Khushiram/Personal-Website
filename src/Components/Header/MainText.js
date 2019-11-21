@@ -21,13 +21,13 @@ const Name = styled.h1`
 `;
 
 const Position = styled.p`
-  margin: 5px 0 0 0;
+  margin: 9px 0 0 0;
 `;
 
 const MainText = props => (
   <Wrapper style={{ left: props.left, top: props.top }}>
     <Name>Raj-K</Name>
-    <Position>Full Stack Web Developer</Position>
+    <Position>{props.subtitle}</Position>
   </Wrapper>
 );
 
