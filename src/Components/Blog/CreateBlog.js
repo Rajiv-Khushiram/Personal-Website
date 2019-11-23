@@ -4,8 +4,6 @@ import { compose } from "redux";
 import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 import { Form, Button, Input } from "antd";
-
-import 'draft-js/dist/Draft.css';
 import { createBlog } from "../../actions/blogAction";
 
 const { TextArea } = Input;
