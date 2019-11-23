@@ -16,12 +16,14 @@ const Content = styled.div`
 max-width: 1280px;
 margin: auto;
 width: 70%;
-line-height: 1.6;
+line-height: 1.4;
+font-size:1.3em;
 display: flex;
 text-align:left;
 justify-content: space-between;
 @media (max-width: 876px) {
   flex-wrap: wrap;
+  width: 80%;
 }
 `;
 
