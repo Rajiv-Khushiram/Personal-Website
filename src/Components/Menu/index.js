@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Hamburger from './Hamburger';
 import Navigation from './Navigation';
+import Raj from './RajLogo'
 
-const Wrapper = styled.nav`
+const WrapperRight = styled.nav`
   position: fixed;
   right: 0;
+  top: 0;
+`;
+
+const WrapperLeft = styled.h3`
+  position: fixed;
+  left: 0;
   top: 0;
 `;
 
@@ -22,10 +29,15 @@ class Menu extends Component {
   }
   render() {
     return (
-      <Wrapper>
+      <React.Fragment>
+        <WrapperLeft>
+          <Raj/>
+        </WrapperLeft>
+      <WrapperRight>
         <Hamburger active={this.state.active} onClick={this.hamburgerClicked} />
         <Navigation active={this.state.active} />
-      </Wrapper>
+      </WrapperRight>
+      </React.Fragment>
     );
   }
 }
