@@ -4,7 +4,7 @@ import background from '../../Assets/background.jpg';
 
 const Wrapper = styled.div`
   min-height: 200px;
-  background: url(${background}) center center no-repeat fixed;
+  background: url(${props => props.background}) center center no-repeat fixed;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -36,8 +36,8 @@ const Link = styled.a`
   }
 `;
 
-const Footer = () => (
-  <Wrapper>
+const Footer = (props) => (
+  <Wrapper background={props.background} >
     <div>
       <LinksWrapper>
         <Link href="https://www.instagram.com/rajivck/" className="fa fa-instagram fa-3x" />

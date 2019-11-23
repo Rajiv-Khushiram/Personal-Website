@@ -3,19 +3,44 @@ import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
 import { Redirect } from "react-router-dom";
+import Header from '../Header';
+import background from '../../Assets/background.jpg';
+import styled from 'styled-components';
+import Footer from '../Footer';
+
 import moment from "moment";
+
+
+
+const Content = styled.div`
+max-width: 1280px;
+margin: auto;
+width: 70%;
+line-height: 1.6;
+display: flex;
+text-align:left;
+justify-content: space-between;
+@media (max-width: 876px) {
+  flex-wrap: wrap;
+}
+`;
 
 const BlogDetails = props => {
   const { blog, auth } = props;
+
   //   if (!auth.uid) return <Redirect to='/signin' />
   if (blog) {
+    const text= blog.content
     return (
-      <div>
-        <span className="card-title">{blog.title}</span>
-        <p style={{ color: "grey", fontStyle: "italic" }}>
-          {moment(blog.createdAt.toDate()).calendar()}{" "}
-          <span style={{ paddingLeft: "20px" }}> {blog.timeToRead}</span>
-        </p>
+      <div> 
+        <Header background={blog.background} heading={blog.title}
+          blog iconWrapper 
+          subtitle={blog.subtitle}/>
+          
+      <Content>
+        <div dangerouslySetInnerHTML ={{ __html: text}} />
+      </Content>
+      <Footer  background={blog.background} />
       </div>
     );
   } else {
