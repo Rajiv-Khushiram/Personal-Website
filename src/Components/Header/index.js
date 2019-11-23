@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import background from '../../Assets/background.jpg';
 import MainText from './MainText';
 import SocialMediaLinks from './SocialMediaLinks';
 import AngleDown from './AngleDown';
 
 const Outer = styled.div`
   height: ${props => props.blog ? "40vh" : "100vh"  };
+  background: url(${props => props.background}) center center no-repeat fixed;
   min-height: 400px;
   width: 100vw;
   display: flex;
@@ -14,7 +14,6 @@ const Outer = styled.div`
   justify-content: center;
   text-align: center;
   color: #fff;
-  background: url(${background}) center center no-repeat fixed;
   background-size: cover;
   @media (max-width: 580px) {
     background-image: none;
@@ -39,7 +38,9 @@ class Header extends Component {
       top: '0',
       blog: props.blog,
       iconsWrapper: props.iconWrapper,
-      subtitle:props.subtitle
+      subtitle:props.subtitle,
+      heading: props.heading,
+      background: props.background
     };
     this.outerHovered = this.outerHovered.bind(this);
   }
@@ -48,8 +49,8 @@ class Header extends Component {
   }
   render() {
     return (
-      <Outer blog={this.state.blog} id="home" onMouseMove={this.outerHovered}>
-        <MainText subtitle={this.state.subtitle} left={this.state.left} top={this.state.top} />
+      <Outer background={this.state.background} blog={this.state.blog} id="home" onMouseMove={this.outerHovered}>
+        <MainText heading={this.props.heading} subtitle={this.state.subtitle} left={this.state.left} top={this.state.top} />
         <IconsWrapper iconsWrapper={this.state.iconsWrapper}>
           <SocialMediaLinks />
           <AngleDown />
