@@ -56,8 +56,9 @@ const Navigation = props => (
     <TabItem to="about" text="About" icon="address-card" />
     <TabItem to="skillset" text="Skills Set" icon="superpowers" />
     <TabItem to="projects" text="Projects" icon="folder" />
-    <a target="_blank" href="https://drive.google.com/open?id=1u9sxWP8irGfc_1v7FVGojRtLZ6WCWMJr" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
-    {/* <a target="_blank" href="https://raj-c-k.web.app/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a> */}
+    <a target="_blank" href="https://drive.google.com/file/d/1RLNc2yZmCMF8qhL4Vg9h4R0eBECBwbTv/view?fbclid=IwAR2wRRZ4FpqzXXlxZIQFqK1--9a-O7lTMPXM6PDVYF4iqA7h7Gh06YngxWM" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
+    
+    <a target="_blank" href="https://raj-c-k.web.app/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a>
 
     {/* <TabItem to="contact" text="Contact" icon="phone" /> */}
   </Wrapper>

@@ -13,7 +13,7 @@ import moment from "moment";
 
 
 const Content = styled.div`
-max-width: 1280px;
+max-width: 980px;
 margin: auto;
 width: 70%;
 line-height: 1.4;
@@ -27,6 +27,7 @@ justify-content: space-between;
 }
 `;
 
+
 const BlogDetails = props => {
   const { blog, auth } = props;
 
@@ -37,7 +38,7 @@ const BlogDetails = props => {
       <div> 
         <Header background={blog.background} heading={blog.title}
           blog iconWrapper 
-          subtitle={blog.subtitle}/>
+          subtitle= {moment(blog.createdAt.toDate()).calendar()}/>
           
       <Content>
         <div dangerouslySetInnerHTML ={{ __html: text}} />

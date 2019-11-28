@@ -54,7 +54,7 @@ const SocialMediaLinks = () => (
       className="fa fa-twitter"
     /> */}
     <Link
-      href="https://www.instagram.com/rajivck/"
+      href="https://www.instagram.com/pro_coder/"
       target="_blank"
       className="fa fa-instagram"
     />
