@@ -51,6 +51,10 @@ const BlogDetails = props => {
       <div className="container center">
         <p>Loading blogs... Please wait</p>
         <p>Loading blogs... Please wait1</p>
+        <p>Loading blogs... Please wait2</p>
+        <p>Loading blogs... Please wait3</p>
+        <p>Loading blogs... Please wait4</p>
+
 
       </div>
     );
