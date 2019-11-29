@@ -50,6 +50,8 @@ const BlogDetails = props => {
     return (
       <div className="container center">
         <p>Loading blogs... Please wait</p>
+        <p>Loading blogs... Please wait1</p>
+
       </div>
     );
   }
