@@ -49,7 +49,7 @@ const BlogDetails = props => {
   } else {
     return (
       <div className="container center">
-        <p>Loading blogs...</p>
+        <p>Loading blogs... Please wait</p>
       </div>
     );
   }
