@@ -21,13 +21,14 @@ const blogReducer = (state = initState, action) => {
         };
 
         case "GET_NEXT_BLOG_LIST":
+          console.log(action.query)
           return {
             ...state,
-            blogList: action.query,
+            blogsList: action.query,
             error:false,
   
           };
-
+          
       default:
         return state;
     }

@@ -6,7 +6,6 @@ export const createBlog = blog => {
       summary: blog.summary,
       timeToRead: blog.timeToRead,
       content: blog.codecontent,
-      codecontent: blog.codecontent,
       background : blog.background,
       subtitle: blog.subtitle,
       createdAt: new Date()
@@ -29,11 +28,11 @@ export const nextPage = docSnap =>  {
   return (dispatch, getState, { getFirebase }) => {
     const db = getFirebase().firestore()
     const query = [];
-
+    console.log(docSnap.createdAt)
     db.collection("blogs")
       .orderBy("createdAt", "desc")
       .startAfter(docSnap.createdAt)
-      .limit(1)
+      .limit(3)
       .get()
       .then(snapshot => {
         let blogObj = {}
@@ -57,11 +56,10 @@ export const previousPage = docSnap =>  {
   return (dispatch, getState, { getFirebase }) => {
     const db = getFirebase().firestore()
     const query = [];
-
     db.collection("blogs")
       .orderBy("createdAt", "desc")
       .endBefore(docSnap.createdAt)
-      .limit(1)
+      .limitToLast(3)
       .get()
       .then(snapshot => {
         let blogObj = {}
@@ -86,7 +84,7 @@ export const getBlogs = () =>  {
     const db = getFirebase().firestore()
     const query = [];
     db.collection('blogs').orderBy("createdAt", "desc")
-    .limit(1)
+    .limit(3)
     .get()
       .then((snapshot) => {
         let blogObj = {}

@@ -38,11 +38,9 @@ const BlogDetails = props => {
       <div> 
         <Header background={blog.background} heading={blog.title}
           blog iconWrapper 
-          subtitle=""
-          //  {moment(blog.createdAt.toDate()).calendar()}
-           />
+          subtitle= {moment(blog.createdAt.toDate()).calendar()}/>
           
-      <Content id='about'>
+      <Content id="about">
         <div dangerouslySetInnerHTML ={{ __html: text}} />
       </Content>
       <Footer  background={blog.background} />
@@ -60,19 +58,19 @@ const BlogDetails = props => {
 const mapStateToProps = (state, ownProps) => {
   // console.log(state);
   const id = ownProps.match.params.id;
-  console.log(id)
-  const blogs = state.blog.blogsList
-  console.log(blogs)
+  const blogs = state.firestore.data.blogs;
   const blog = blogs ? blogs[id] : null;
-  const test = blogs.findIndex(x => x.id === id);
-  console.log(test)
   return {
     blog: blog,
-    blogs: state.blog.blogList,
     auth: state.firebase.auth
   };
 };
 
 export default compose(
-  connect(mapStateToProps)
+  connect(mapStateToProps),
+  firestoreConnect([
+    {
+      collection: "blogs"
+    }
+  ])
 )(BlogDetails);
