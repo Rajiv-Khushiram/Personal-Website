@@ -40,7 +40,7 @@ const BlogDetails = props => {
           blog iconWrapper 
           subtitle= {moment(blog.createdAt.toDate()).calendar()}/>
           
-      <Content>
+      <Content id="about">
         <div dangerouslySetInnerHTML ={{ __html: text}} />
       </Content>
       <Footer  background={blog.background} />
