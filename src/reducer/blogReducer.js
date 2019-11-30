@@ -1,5 +1,6 @@
 const initState = {
   error:false,
+  blogsList:[]
 }
 const blogReducer = (state = initState, action) => {
   switch (action.type) {
@@ -11,9 +12,27 @@ const blogReducer = (state = initState, action) => {
         submitError:false,
       };
 
+      case "LIST_BLOG_SUCCESS":
+        return {
+          ...state,
+          blogsList: action.query,
+          error:false,
+
+        };
+
+        case "GET_NEXT_BLOG_LIST":
+          return {
+            ...state,
+            blogList: action.query,
+            error:false,
+  
+          };
+
       default:
         return state;
     }
 };
+
+
 
 export default blogReducer;

@@ -1,14 +1,28 @@
 import React, { Component } from "react";
 import Bloglist from "./blogList";
 import { connect } from "react-redux";
-import { firestoreConnect } from "react-redux-firebase";
-import { compose } from "redux";
+import { firestoreConnect,  } from "react-redux-firebase";
+import {
+  compose,
+  withHandlers,
+  lifecycle,
+  withContext,
+  getContext
+} from 'recompose'
 import { Redirect } from "react-router-dom";
 import Header from "../Header";
+import { Button } from "antd";
+
+
 import Menu from "../Menu";
 import styled from "styled-components";
 import Footer from "../Footer"
 import Raj from '../Menu/RajLogo'
+
+
+
+import { getBlogs, nextPage, previousPage } from "../../actions/blogAction";
+
 
 
 const BlogSection = styled.div`
@@ -16,8 +30,7 @@ const BlogSection = styled.div`
   box-sizing: border-box;
   display:block;
   position:relative;
-  padding-right:15px;
-  padding-left:15px;
+  padding: 20px;
   margin-left:auto;
   margin-right:auto;
   width:50%;
@@ -39,10 +52,22 @@ class Blog extends Component {
 
   componentDidMount() {
     document.body.style.backgroundColor="#F8F8F8";
+    Promise.all([this.props.getBlogs()]).then(allBlogs => {}); 
 
   }
+
+  next = (last) => {
+    var last_element = this.props.blog[this.props.blog.length - 1];
+    this.props.nextPage(last_element)
+  };
+
+  previous = (first) => {
+    var firstElement = this.props.blog[0];
+    this.props.previousPage(firstElement)
+  };
+
   render() {
-    const { blogs } = this.props;
+    const { blog } = this.props;
     return (
       <React.Fragment>
         <Header background="https://firebasestorage.googleapis.com/v0/b/raj-c-k.appspot.com/o/joshua-earle-K3V1WUkqBxM-unsplash.jpg?alt=media&token=f9edb71d-84cd-4b0f-8d56-469d5d6e9a74&fbclid=IwAR11x6B2Xdh_pK1yPZ3n-O9B6nLXP_NAax036kunYpASCqXVwBfX3RSqTM4" heading="Raj-K"  blog iconWrapper subtitle="Think before you speak. Read before you think."/>
@@ -50,7 +75,19 @@ class Blog extends Component {
           <Raj/>
         </WrapperLeft>
         <BlogSection id='about'>
-          <Bloglist  blogs={blogs} />
+          <Bloglist  blogs={blog} />
+          <Button
+                    onClick={() => this.previous()}
+                  >
+                    Previous
+          </Button>
+          <Button
+                    style={{float:"right"}}
+                    onClick={() => this.next()}
+                  >
+                    Next
+          </Button>
+          <br></br>
         </BlogSection>
        <Footer background="https://firebasestorage.googleapis.com/v0/b/raj-c-k.appspot.com/o/joshua-earle-K3V1WUkqBxM-unsplash.jpg?alt=media&token=f9edb71d-84cd-4b0f-8d56-469d5d6e9a74&fbclid=IwAR11x6B2Xdh_pK1yPZ3n-O9B6nLXP_NAax036kunYpASCqXVwBfX3RSqTM4"/>
       </React.Fragment>
@@ -62,11 +99,18 @@ const mapStateToProps = state => {
   //console.log(state);
   return {
     auth: state.firebase.auth,
-    blogs: state.firestore.ordered.blogs
+    blog: state.blog.blogsList,
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    getBlogs: () => dispatch(getBlogs()),
+    nextPage: docSnap => dispatch(nextPage(docSnap)),
+    previousPage: docSnap => dispatch(previousPage(docSnap)),
+    dispatch
+  };
+};
 export default compose(
-  connect(mapStateToProps),
-  firestoreConnect([{ collection: "blogs", orderBy: ['createdAt', 'desc'] }])
+  connect(mapStateToProps, mapDispatchToProps),
 )(Blog);
