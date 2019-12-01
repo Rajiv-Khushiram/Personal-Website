@@ -43,7 +43,7 @@ const Footer = (props) => (
         <Link href="https://www.instagram.com/pro_coder/" className="fa fa-instagram fa-3x" />
         <Link href="https://www.linkedin.com/in/rajiv-khushiram/" className="fa  fa-linkedin fa-3x" />
         <Link href="https://github.com/Rajiv-Khushiram" className="fa fa-github fa-3x" />
-        <Link href="https://drive.google.com/file/d/1RLNc2yZmCMF8qhL4Vg9h4R0eBECBwbTv/view?fbclid=IwAR2wRRZ4FpqzXXlxZIQFqK1--9a-O7lTMPXM6PDVYF4iqA7h7Gh06YngxWM" className="fa fa-file fa-3x" />
+        <Link href="https://drive.google.com/file/d/1XwQY9m0Dlz9xJOrS2fVzlSOpFRDrwmn6/view" className="fa fa-file fa-3x" />
       </LinksWrapper>
     </div>
   </Wrapper>
