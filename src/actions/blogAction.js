@@ -41,7 +41,16 @@ export const nextPage = docSnap =>  {
           return;
         }
         snapshot.forEach(doc => {
-          query.push(doc.data());
+          blogObj = {
+            id : doc.id,
+            background : doc.data().background,
+            content : doc.data().content,
+            title : doc.data().title,
+            createdAt : doc.data().createdAt,
+            timeToRead: doc.data().timeToRead,
+            summary : doc.data().summary
+          }
+          query.push(blogObj);
         });
        return dispatch({ type: "GET_NEXT_BLOG_LIST", query});
       })
@@ -69,7 +78,16 @@ export const previousPage = docSnap =>  {
           return;
         }
         snapshot.forEach(doc => {
-          query.push(doc.data());
+          blogObj = {
+            id : doc.id,
+            background : doc.data().background,
+            content : doc.data().content,
+            title : doc.data().title,
+            createdAt : doc.data().createdAt,
+            timeToRead: doc.data().timeToRead,
+            summary : doc.data().summary
+          }
+          query.push(blogObj);
         });
        return dispatch({ type: "GET_NEXT_BLOG_LIST", query});
       })
