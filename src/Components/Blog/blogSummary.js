@@ -29,7 +29,7 @@ const BlogSummary = ({ blog }) => {
   return (
     <div>
       <Box>
-        <Link style={{ textDecoration:"none", color: "black" }} to={"/blog/" + blog.id} key={blog.id}>
+        <Link style={{ textDecoration:"none", color: "black" }} target="_blank" to={"/blog/" + blog.id} key={blog.id}>
           <h2 style={{ fontSize: '2em ', fontWeight:'800',paddingTop:"15px"}}>{blog.title}</h2>
         </Link>
         <p style={{color:"grey", fontStyle:"italic", lineHeight:'1.7'}}>
@@ -43,6 +43,7 @@ const BlogSummary = ({ blog }) => {
         <br></br>
         <Link
           style={{ color: "black", fontStyle: "italic" }}
+          target="_blank"
           to={"/blog/" + blog.id}
         >
           Read more...

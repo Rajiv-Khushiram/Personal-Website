@@ -1,38 +1,31 @@
 import React, { Component } from "react";
 import Bloglist from "./blogList";
 import { connect } from "react-redux";
-import {
-  compose
-} from 'recompose'
-import { Redirect } from "react-router-dom";
+import { compose } from "recompose";
 import Header from "../Header";
-import { Button } from "antd";
-
+import {Icon, Button, Spin } from "antd";
 
 import Menu from "../Menu";
 import styled from "styled-components";
-import Footer from "../Footer"
-import Raj from '../Menu/RajLogo'
-
-
+import Footer from "../Footer";
+import Raj from "../Menu/RajLogo";
+import "antd/dist/antd.css";
 
 import { getBlogs, nextPage, previousPage } from "../../actions/blogAction";
-
-
 
 const BlogSection = styled.div`
   text-align: left;
   box-sizing: border-box;
-  display:block;
-  position:relative;
+  display: block;
+  position: relative;
   padding: 20px;
-  margin-left:auto;
-  margin-right:auto;
-  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
   line-height: 1.6;
   @media (max-width: 600px) {
-    width:95%;
-    padding-left:5px;
+    width: 95%;
+    padding-left: 5px;
   }
 `;
 
@@ -42,23 +35,20 @@ const WrapperLeft = styled.h3`
   top: 0;
 `;
 
-
 class Blog extends Component {
-
   componentDidMount() {
-    document.body.style.backgroundColor="#F8F8F8";
-    Promise.all([this.props.getBlogs()]).then(allBlogs => {}); 
-
+    document.body.style.backgroundColor = "#F8F8F8";
+    Promise.all([this.props.getBlogs()]).then(allBlogs => {});
   }
 
-  next = (last) => {
+  next = last => {
     var last_element = this.props.blog[this.props.blog.length - 1];
-    this.props.nextPage(last_element)
+    this.props.nextPage(last_element);
   };
 
-  previous = (first) => {
+  previous = first => {
     var firstElement = this.props.blog[0];
-    this.props.previousPage(firstElement)
+    this.props.previousPage(firstElement);
   };
 
   render() {
@@ -72,23 +62,32 @@ class Blog extends Component {
           iconWrapper
           subtitle="Think before you speak. Read before you think."
         />
-        <Menu />
+        {/* <Menu /> */}
         <WrapperLeft>
           <Raj />
         </WrapperLeft>
-        <BlogSection id="about">
-          <Bloglist blogs={blog} />
-          {blog.length > 2 && (
-          <div>
-          <Button onClick={() => this.previous()}>Previous</Button>
+        {blog.length > 0 ? (
+          <BlogSection id="about">
+            <Bloglist blogs={blog} />
 
-            <Button style={{ float: "right" }} onClick={() => this.next()}>
-              Next
-            </Button></div>
-          )}
+            <div>
+              <Button onClick={() => this.previous()}>
+              <Icon type="left" />
+Previous</Button>
 
-          <br></br>
-        </BlogSection>
+              <Button style={{ float: "right" }} onClick={() => this.next()}>
+                Next
+                <Icon type="right" />
+              </Button>
+            </div>
+
+            <br></br>
+          </BlogSection>
+        ) : (
+          <div style={{padding:"20px"}} className="container center">
+            <Spin size="large" /><br></br> <br></br><p>Loading blogs...</p>
+          </div>
+        )}
         <Footer background="https://firebasestorage.googleapis.com/v0/b/raj-c-k.appspot.com/o/joshua-earle-K3V1WUkqBxM-unsplash.jpg?alt=media&token=f9edb71d-84cd-4b0f-8d56-469d5d6e9a74&fbclid=IwAR11x6B2Xdh_pK1yPZ3n-O9B6nLXP_NAax036kunYpASCqXVwBfX3RSqTM4" />
       </React.Fragment>
     );
@@ -99,7 +98,7 @@ const mapStateToProps = state => {
   //console.log(state);
   return {
     auth: state.firebase.auth,
-    blog: state.blog.blogsList,
+    blog: state.blog.blogsList
   };
 };
 
@@ -111,6 +110,4 @@ const mapDispatchToProps = dispatch => {
     dispatch
   };
 };
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
-)(Blog);
+export default compose(connect(mapStateToProps, mapDispatchToProps))(Blog);
