@@ -3,7 +3,7 @@ import Bloglist from "./blogList";
 import { connect } from "react-redux";
 import { compose } from "recompose";
 import Header from "../Header";
-import {Icon, Button, Spin } from "antd";
+import { Icon, Button, Spin } from "antd";
 
 // import Menu from "../Menu";
 import styled from "styled-components";
@@ -32,6 +32,16 @@ const WrapperLeft = styled.h3`
   position: fixed;
   left: 0;
   top: 0;
+`;
+
+const Wrapper = styled.div`
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+
+  @media (max-width: 600px) {
+    padding-bottom: 70px;
+  }
 `;
 
 class Blog extends Component {
@@ -71,8 +81,9 @@ class Blog extends Component {
 
             <div>
               <Button onClick={() => this.previous()}>
-              <Icon type="left" />
-Previous</Button>
+                <Icon type="left" />
+                Previous
+              </Button>
 
               <Button style={{ float: "right" }} onClick={() => this.next()}>
                 Next
@@ -83,9 +94,11 @@ Previous</Button>
             <br></br>
           </BlogSection>
         ) : (
-          <div style={{padding:"20px"}} className="container center">
-            <Spin size="large" /><br></br> <br></br><p>Loading blogs...</p>
-          </div>
+          <Wrapper>
+            <Spin size="large" />
+            <br></br> <br></br>
+            <p>Loading blogs...</p>
+          </Wrapper>
         )}
         <Footer background="https://firebasestorage.googleapis.com/v0/b/raj-c-k.appspot.com/o/joshua-earle-K3V1WUkqBxM-unsplash.jpg?alt=media&token=f9edb71d-84cd-4b0f-8d56-469d5d6e9a74&fbclid=IwAR11x6B2Xdh_pK1yPZ3n-O9B6nLXP_NAax036kunYpASCqXVwBfX3RSqTM4" />
       </React.Fragment>
