@@ -5,11 +5,10 @@ import { compose } from "recompose";
 import Header from "../Header";
 import {Icon, Button, Spin } from "antd";
 
-import Menu from "../Menu";
+// import Menu from "../Menu";
 import styled from "styled-components";
 import Footer from "../Footer";
 import Raj from "../Menu/RajLogo";
-import "antd/dist/antd.css";
 
 import { getBlogs, nextPage, previousPage } from "../../actions/blogAction";
 

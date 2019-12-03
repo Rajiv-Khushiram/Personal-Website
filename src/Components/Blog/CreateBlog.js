@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { compose } from "redux";
-import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 import { Form, Button, Input } from "antd";
 import { createBlog } from "../../actions/blogAction";
@@ -61,7 +59,7 @@ class CreateBlog extends Component {
   }
 
   render() {
-    const { editorState } = this.state;
+    // const { editorState } = this.state;
 
 
     return (

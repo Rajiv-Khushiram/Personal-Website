@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import background from '../../Assets/background.jpg';
+// import background from '../../Assets/background.jpg';
 
 const Wrapper = styled.div`
   min-height: 200px;
@@ -11,11 +11,11 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const CopyRightText = styled.p`
-  color: #fff;
-  font-size: 1rem;
-  text-align: center;
-`;
+// const CopyRightText = styled.p`
+//   color: #fff;
+//   font-size: 1rem;
+//   text-align: center;
+// `;
 
 const LinksWrapper = styled.div`
   display: flex;
