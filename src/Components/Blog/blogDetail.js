@@ -9,6 +9,9 @@ import styled from 'styled-components';
 import Footer from '../Footer';
 
 import moment from "moment";
+import { Button, Spin } from "antd";
+import "antd/dist/antd.css";
+
 
 
 
@@ -48,8 +51,8 @@ const BlogDetails = props => {
     );
   } else {
     return (
-      <div className="container center">
-        <p>Loading blogs...</p>
+      <div style={{padding:"30px"}} className="container center">
+            <Spin size="large" /><br></br> <br></br><p>Loading blog...</p>
       </div>
     );
   }

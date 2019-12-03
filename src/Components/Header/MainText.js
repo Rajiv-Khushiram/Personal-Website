@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 const Name = styled.h1`
   font-size: 7rem;
   font-family: Poiret One, Arial, Helvetica, sans-serif;
+  color:#fff;
   margin: 0;
   @media (max-width: 580px) {
     font-size: 3.5rem;
