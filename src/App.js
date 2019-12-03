@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import { Provider } from "react-redux";
 import firebase from "firebase/app";
 import "firebase/auth";

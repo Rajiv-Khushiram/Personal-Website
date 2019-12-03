@@ -1,7 +1,8 @@
 import React from "react";
-import moment from "moment";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
+const { formatDate, toDateTime } = require('../Utilities')
 
 
 const Box = styled.div`
@@ -33,7 +34,8 @@ const BlogSummary = ({ blog }) => {
           <h2 style={{ fontSize: '2em ', fontWeight:'800',paddingTop:"15px"}}>{blog.title}</h2>
         </Link>
         <p style={{color:"grey", fontStyle:"italic", lineHeight:'1.7'}}>
-          {moment(blog.createdAt.toDate()).calendar()}{" "}
+        {formatDate(
+            toDateTime(blog.createdAt.seconds))}
           <span className="fa fa-clock-o" style={{ paddingLeft: "20px", fontStyle:"italic" }}> {blog.timeToRead} mins</span>
         </p>
         <Summary>{blog.summary}</Summary>
