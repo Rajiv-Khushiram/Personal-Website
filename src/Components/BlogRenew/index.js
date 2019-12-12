@@ -3,7 +3,8 @@ import Title from "../SectionTitle";
 import Layout from "./Layout";
 import Wrapper from "../SectionWrapper";
 import Header from "../Header";
-import background from "../../Assets/background.jpg";
+import background2 from '../../Assets/backgroundoriginal.jpeg';
+
 import Footer from "../Footer";
 
 class BlogRenew extends Component {
@@ -25,7 +26,7 @@ class BlogRenew extends Component {
     return (
       <React.Fragment>
         <Header
-          background={background}
+          background={background2}
           heading="Raj-K"
           subtitle={"A diary of Learning"}
         />
@@ -38,7 +39,7 @@ class BlogRenew extends Component {
             active={this.state.active}
           />
         </Wrapper>
-        <Footer background={background} />
+        <Footer background={background2} />
       </React.Fragment>
     );
   }
