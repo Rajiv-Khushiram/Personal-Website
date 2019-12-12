@@ -5,11 +5,12 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 
 import HomePage from "./Components/HomePage";
-import Blog from "./Components/Blog";
 import BlogDetails from "./Components/Blog/blogDetail";
 import CreateBlog from "./Components/Blog/CreateBlog";
-
 import SignIn from "./Components/Auth/SignIn";
+import BlogRenew from "./Components/BlogRenew"
+
+// import stateContext from "./Components/InfinityBlogLoader/Context"
 
 
 const ProtectedRoute = ({ isAllowed, ...props }) =>
@@ -24,7 +25,11 @@ class Routes extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/blog" component={Blog} />
+          <Route exact path="/blog" component={BlogRenew} />
+          {/* <Route exact path="/blog/page/:id" component={useReactHookBlogHoc} />
+          <Route exact path="/blog/test/:id" component={fireStoreHook} /> */}
+          {/* <Route exact path="/Infinity/:id" component={IninityBlogLoader} /> */}
+
           <Route exact path="/blog/:id" component={BlogDetails} />
           <ProtectedRoute
             exact path="/addBlog"
