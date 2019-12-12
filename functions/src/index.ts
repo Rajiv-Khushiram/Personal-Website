@@ -10,7 +10,7 @@ const ALGOLIA_INDEX_BLOGS = "blogs";
 
 admin.initializeApp(functions.config().firebase);
 
-exports.indexBlog = functions
+exports.indexBlog = functions.region("asia-northeast1")
     .firestore.document("blogs/{blogId}")
     .onCreate((snap, context) => {
         // Get the note document
@@ -37,7 +37,7 @@ exports.updateBlog = functions.firestore.document("blogs/{blogId}")
         return;
     });
 
-exports.unIndexBlog = functions
+exports.unIndexBlog = functions.region("asia-northeast1")
     .firestore.document("blogs/{blogId}")
     .onDelete((snap, context) => {
         const blog = snap.data();
