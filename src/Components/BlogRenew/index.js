@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import Title from '../SectionTitle';
-import Layout from './Layout';
-import Wrapper from '../SectionWrapper';
+import React, { Component } from "react";
+import Title from "../SectionTitle";
+import Layout from "./Layout";
+import Wrapper from "../SectionWrapper";
 import Header from "../Header";
-import background from '../../Assets/background.jpg';
+import background from "../../Assets/background.jpg";
 import Footer from "../Footer";
 
 class BlogRenew extends Component {
   constructor() {
     super();
     this.state = {
-      active: false,
+      active: false
     };
     this.onEnter = this.onEnter.bind(this);
     this.onLeave = this.onLeave.bind(this);
@@ -22,19 +22,23 @@ class BlogRenew extends Component {
     this.setState({ active: false });
   }
   render() {
-    return (<React.Fragment>
-            <Header background={background} heading="Raj-K" subtitle={"A diary of Learning"}/>
-
-      <Wrapper id="projects">
-        <Title text="My Blogs" icon="book" color="ff4f81" />
-        <Layout
-          onEnter={this.onEnter}
-          onLeave={this.onLeave}
-          active={this.state.active}
+    return (
+      <React.Fragment>
+        <Header
+          background={background}
+          heading="Raj-K"
+          subtitle={"A diary of Learning"}
         />
-      </Wrapper>
-      <Footer  background={background} />
 
+        <Wrapper id="projects">
+          <Title text="My Blogs" icon="book" color="ff4f81" />
+          <Layout
+            onEnter={this.onEnter}
+            onLeave={this.onLeave}
+            active={this.state.active}
+          />
+        </Wrapper>
+        <Footer background={background} />
       </React.Fragment>
     );
   }
