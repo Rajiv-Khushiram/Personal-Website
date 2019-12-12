@@ -6,6 +6,7 @@ import { Link } from 'react-scroll';
 
 const Wrapper = styled.p`
   width: 70%;
+  font-size: 16px;
   line-height: 1.6;
   animation: ${props => (props.active ? keyframes`${bounceInLeft}` : '')} 1s;
   @media (max-width: 876px) {

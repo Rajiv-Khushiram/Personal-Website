@@ -24,6 +24,7 @@ export const createBlog = blog => {
   };
 };
 
+
 export const nextPage = docSnap =>  {
   return (dispatch, getState, { getFirebase }) => {
     const db = getFirebase().firestore()
@@ -32,7 +33,7 @@ export const nextPage = docSnap =>  {
     db.collection("blogs")
       .orderBy("createdAt", "desc")
       .startAfter(docSnap.createdAt)
-      .limit(3)
+      .limit(1)
       .get()
       .then(snapshot => {
         let blogObj = {}
@@ -99,27 +100,33 @@ export const previousPage = docSnap =>  {
 
 export const getBlogs = () =>  {
   return (dispatch, getState, { getFirebase }) => {
-    const db = getFirebase().firestore()
-    const query = [];
-    db.collection('blogs').orderBy("createdAt", "desc")
-    .limit(3)
-    .get()
-      .then((snapshot) => {
-        let blogObj = {}
+    // // const db = getFirebase().firestore()
+    // const query = [];
 
-        snapshot.forEach(doc => {
-          blogObj = {
-            id : doc.id,
-            background : doc.data().background,
-            content : doc.data().content,
-            title : doc.data().title,
-            createdAt : doc.data().createdAt,
-            timeToRead: doc.data().timeToRead,
-            summary : doc.data().summary
-          }
-          query.push(blogObj);
-        });
-       return dispatch({ type: "LIST_BLOG_SUCCESS", query });
-      })
-    }
+    console.log(getState())
+
+    // db.collection('blogs').orderBy("createdAt", "desc")
+    // .limit(3)
+    // .get()
+    //   .then((snapshot) => {
+    //     let blogObj = {}
+
+    //     snapshot.forEach(doc => {
+    //       blogObj = {
+    //         id : doc.id,
+    //         background : doc.data().background,
+    //         content : doc.data().content,
+    //         title : doc.data().title,
+    //         createdAt : doc.data().createdAt,
+    //         timeToRead: doc.data().timeToRead,
+    //         summary : doc.data().summary
+    //       }
+    //       query.push(blogObj);
+    //     });
+    //    return dispatch({ type: "LIST_BLOG_SUCCESS", query });
+    //   })
+    // 
+
+
+  }
 }
