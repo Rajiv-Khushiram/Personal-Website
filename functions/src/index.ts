@@ -50,11 +50,11 @@ admin.initializeApp(functions.config().firebase);
 //         return;
 //     });
 
-// admin.initializeApp(functions.config().firebase);
+// // admin.initializeApp(functions.config().firebase);
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
+// // // Start writing Firebase Functions
+// // // https://firebase.google.com/docs/functions/typescript
 
-// // export const helloWorld = functions.https.onRequest((request, response) => {
-// //  response.send("Hello from Firebase!");
-// // });
+// // // export const helloWorld = functions.https.onRequest((request, response) => {
+// // //  response.send("Hello from Firebase!");
+// // // });

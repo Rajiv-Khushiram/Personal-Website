@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 
 const Wrapper = styled.p`
   width: 70%;
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.6;
   animation: ${props => (props.active ? keyframes`${bounceInLeft}` : '')} 1s;
   @media (max-width: 876px) {
@@ -23,12 +23,18 @@ const SkillsetLink = styled.span`
 
 const Paragraph = props => (
   <Wrapper active={props.active}>
-    Hello World! Captivated by the possibilities that the intersection of design and technology can bring,
-    I stay awake motivated to drive meaningful levels of impact at different scales across the world.
-    Always hungry to learn more about the world (or in general), I look forward in bringing my focused drive to empower
-     teams and shape the future for the greater good. You can check my{' '}
+    How is World? I'm a web developer with over 4 years of commercial experience in <strong> React </strong>and <strong>Java</strong> development. Currently at  <a
+      href="https://sayi.do/"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: 'dodgerblue' }}
+    >
+     SAYI DO{' '}
+    </a>as a <strong>Full Stack JavaScript Developer</strong>, building serverless solutions running ReactJS and <strong>Cloud Functions</strong>. 
+
+     You can check my{' '}
     <Link to="skillset" spy={true} smooth={true}>
-      <SkillsetLink>full skills set here</SkillsetLink>
+      <SkillsetLink>skills here</SkillsetLink>
     </Link>{' '}
     and be sure to check out my{' '}
     <a
@@ -39,6 +45,15 @@ const Paragraph = props => (
     >
       github
     </a>{' '}
+    and{' '}
+    <a
+      href="/blog"
+      rel="noopener noreferrer"
+      style={{ color: 'dodgerblue' }}
+    >
+      blog
+    </a>{' '}
+
     {/* and{' '}
     <a
       href="https://codepen.io/ahmedtarek2134"
@@ -48,7 +63,7 @@ const Paragraph = props => (
     >
       codepen
     </a>{' '} */}
-    for my projects &lt;3
+     {/* &lt;3 */}
   </Wrapper>
 );
 

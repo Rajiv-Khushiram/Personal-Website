@@ -26,10 +26,10 @@ const Item = styled.li`
 `;
 
 const skills = [
-  'HTML5',
-  'CSS',
-  'JavaScript',
   'React',
+  'React hooks',
+  'JavaScript',
+  'CSS',
   'Redux',
   'JQuery',
   'Webpack',

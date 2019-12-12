@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   border-bottom: 1px solid #eee;
   max-width: 1280px;
   margin: auto;
+  font-size:18px;
   @media (max-width: 876px) {
     padding: 5%;
   }
