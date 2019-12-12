@@ -4,10 +4,10 @@ const {
     fixBabelImports,
     addLessLoader
   } = require("customize-cra");
-  const AntdDayjsWebpackPlugin = require("antd-dayjs-webpack-plugin");
+  // const AntdDayjsWebpackPlugin = require("antd-dayjs-webpack-plugin");
   
   module.exports = override(
-    addWebpackPlugin(new AntdDayjsWebpackPlugin()),
+    // addWebpackPlugin(new AntdDayjsWebpackPlugin()),
     fixBabelImports("import", {
       libraryName: "antd",
       libraryDirectory: "es",

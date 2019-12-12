@@ -9,7 +9,7 @@ import { ReactReduxFirebaseProvider } from "react-redux-firebase";
 import { createFirestoreInstance } from "redux-firestore";
 import configureStore from './store'
 import { firebase as fbConfig, reduxFirebase as rfConfig } from "./config";
-
+import PhotoContextProvider from "./Context/PhotoPageContext"
 import "./App.css";
 
 import Routes from "./Routes"
@@ -29,9 +29,9 @@ class App extends Component {
         config={rfConfig}
         dispatch={store.dispatch}
         createFirestoreInstance={createFirestoreInstance}>
-           <div className="App">
+                <PhotoContextProvider >  <div className="App">
           <Routes/>
-          </div>
+          </div></PhotoContextProvider>
           </ReactReduxFirebaseProvider>
   </Provider>
     );

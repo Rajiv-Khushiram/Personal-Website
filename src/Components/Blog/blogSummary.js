@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const { formatDate, toDateTime } = require('../Utilities')
 
-
 const Box = styled.div`
   width: 100%;
   padding: 20px;
@@ -22,15 +21,11 @@ const Summary = styled.p`
   align-items: center;
 `;
 
-/*
-
-*/
-
 const BlogSummary = ({ blog }) => {
   return (
     <div>
       <Box>
-        <Link style={{ textDecoration:"none", color: "black" }} target="_blank" to={"/blog/" + blog.id} key={blog.id}>
+        <Link style={{ textDecoration:"none", color: "black" }} target="_blank" to={"/blog/" + blog.id}>
           <h2 style={{ fontSize: '2em ', fontWeight:'800',paddingTop:"15px"}}>{blog.title}</h2>
         </Link>
         <p style={{color:"grey", fontStyle:"italic", lineHeight:'1.7'}}>
@@ -38,12 +33,12 @@ const BlogSummary = ({ blog }) => {
             toDateTime(blog.createdAt.seconds))}
           <span className="fa fa-clock-o" style={{ paddingLeft: "20px", fontStyle:"italic" }}> {blog.timeToRead} mins</span>
         </p>
-        <Summary>{blog.summary}</Summary>
+        <Summary >{blog.summary}</Summary>
 
         {/* <p>Posted by {project.authorFirstName} {project.authorLastName}</p>
           <p className="grey-text">{moment({blog.createdAt}.toDate()).calendar()}</p> */}
         <br></br>
-        <Link
+        <Link key={blog.id}
           style={{ color: "black", fontStyle: "italic" }}
           target="_blank"
           to={"/blog/" + blog.id}

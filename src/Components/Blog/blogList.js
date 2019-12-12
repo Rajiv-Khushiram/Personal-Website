@@ -3,13 +3,14 @@ import BlogSummary from './blogSummary'
 
 const BlogList = ({blogs}) => { 
     return (
-        <div className="blog-list section">
+        <React.Fragment>
             { blogs && blogs.map(blog => {
                 return(
-                      <BlogSummary key={blog.id} blog={blog} />
+                      <BlogSummary key={blog.id} 
+                      blog={blog} />
                 )
             })}  
-        </div>
+            </React.Fragment>
     )
 }
 

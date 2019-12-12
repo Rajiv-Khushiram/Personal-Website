@@ -16,6 +16,7 @@ const Wrapper = styled.ul`
   list-style: none;
   color: #fff;
   transition: 0.5s;
+  
 `;
 
 const Tab = styled.span`
@@ -58,7 +59,7 @@ const Navigation = props => (
     <TabItem to="projects" text="Projects" icon="folder" />
     <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1XwQY9m0Dlz9xJOrS2fVzlSOpFRDrwmn6/view" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
     
-    <a target="_blank" rel="noopener noreferrer" href="https://raj-c-k.web.app/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a>
+    <a  rel="noopener noreferrer" href="/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a>
 
     {/* <TabItem to="contact" text="Contact" icon="phone" /> */}
   </Wrapper>
