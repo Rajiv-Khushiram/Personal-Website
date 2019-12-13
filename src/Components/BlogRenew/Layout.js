@@ -29,6 +29,7 @@ const Layout = props =>  {
   async function fetchData() {
     return firestore
     .collection("blogs")
+    .orderBy("createdAt", "desc")
     .get()
     .then(snapshot => {
       snapshot.forEach(doc => {
