@@ -34,7 +34,7 @@ class BlogRenew extends Component {
         />
        <Menu navigation/>
 
-        <Wrapper id="projects">
+        <Wrapper id="blogs">
           <Title text="My Blogs" icon="book" color="ff4f81" />
           <Layout
             onEnter={this.onEnter}

@@ -39,18 +39,15 @@ const Item = styled.li`
 const skills = [
   'Git',
   'CI/CD',
-  'Containers',
-  'Cloud Functions',
-  'Unix & Linux OS',
-  'Puppet',
-  'Bash Scripting',
   'Firebase',
-  'Algolia',
-  'MailJet',
-  'Big Query',
-  'Camunda BPMS',
   'Google Cloud Platform',
   'AWS',
+  'Containers',
+  'Cloud Functions',
+  'Puppet',
+  'Big Query',
+  'Bash Scripting',
+  'Camunda BPMS',
 ];
 
 const SkillItems = skills.map(skill => <Item key={skill}>{skill}</Item>);

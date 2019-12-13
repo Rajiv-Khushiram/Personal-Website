@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
+import Menu from '../Menu';
+
 // import { Redirect } from "react-router-dom";
 import Header from "../Header";
 // import background from '../../Assets/background.jpg';
@@ -9,6 +11,7 @@ import styled from "styled-components";
 import Footer from "../Footer";
 
 // import moment from "moment";
+import './index.css';
 import { Spin } from "antd";
 const { formatDate, toDateTime } = require("../Utilities");
 
@@ -48,6 +51,8 @@ const BlogDetails = props => {
           iconWrapper
           subtitle={formatDate(toDateTime(blog.createdAt.seconds))}
         />
+                       <Menu navigation/>
+
         {/* //{moment(blog.createdAt.toDate()).calendar()} */}
         <ContentContainer>
           <Content id="about">
