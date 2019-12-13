@@ -76,8 +76,7 @@ const Layout = props =>  {
     })
     .then(() => {
       setData(query);
-      console.log("just once");
-      console.log(query)
+      console.log("fetched data");
       return query;
     })
     .catch(err => setErrors(err));

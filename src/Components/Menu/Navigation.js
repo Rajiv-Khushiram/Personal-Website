@@ -51,7 +51,7 @@ TabItem.propTypes = {
   icon: PropTypes.string.isRequired,
 };
 
-const Navigation = props => (
+export const Navigation = props => (
   <Wrapper active={props.active}>
     <TabItem to="home" text="Home" icon="home" />
     <TabItem to="about" text="About" icon="address-card" />
@@ -65,8 +65,21 @@ const Navigation = props => (
   </Wrapper>
 );
 
+export const NavigationBlog = props => (
+  <Wrapper active={props.active}>
+    <a  rel="noopener noreferrer" href="/" ><Tab style={{color:'white', textDecoration:'none'}}>Home<i className="fa fa-file-code-o"></i></Tab></a>
+
+    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1XwQY9m0Dlz9xJOrS2fVzlSOpFRDrwmn6/view" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
+    
+    {/* <a  rel="noopener noreferrer" href="/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a> */}
+
+    </Wrapper>
+);
+
+
 Navigation.propTypes = {
   active: PropTypes.bool.isRequired,
 };
 
-export default Navigation;
+
+

@@ -3,6 +3,8 @@ import Title from "../SectionTitle";
 import Layout from "./Layout";
 import Wrapper from "../SectionWrapper";
 import Header from "../Header";
+import Menu from '../Menu';
+
 import background2 from '../../Assets/backgroundoriginal.jpeg';
 
 import Footer from "../Footer";
@@ -30,6 +32,7 @@ class BlogRenew extends Component {
           heading="Raj-K"
           subtitle={"A diary of Learning"}
         />
+       <Menu navigation/>
 
         <Wrapper id="projects">
           <Title text="My Blogs" icon="book" color="ff4f81" />
