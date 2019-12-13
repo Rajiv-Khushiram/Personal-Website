@@ -23,6 +23,7 @@ const Name = styled.h1`
 
 const Position = styled.p`
   margin: 9px 0 0 0;
+  font-size: 20px;
 `;
 
 const MainText = props => (

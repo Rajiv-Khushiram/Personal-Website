@@ -6,6 +6,7 @@ import { bounceInRight } from 'react-animations';
 import Card from './Card';
 import { useFirestore } from "react-redux-firebase";
 import { Spin } from "antd";
+import bounceInLeft from 'react-animations/lib/bounce-in-left';
 
 
 const Wrapper = styled.div`
@@ -13,40 +14,10 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin: 3% 0;
-  animation: ${props => (props.active ? keyframes`${bounceInRight}` : '')} 1s;
+  animation: ${props => (props.active ? keyframes`${bounceInLeft}` : '')} 1s;
 `;
 
-//  const [data, setData] = useBlog();
 
-// const Blogs = [  {
-//   title: 'Hackathon 2019',
-//   description:
-//     `A prototype for grouping students in team projects. This project stacks React-Mongo-Db and hosting`,
-//   link: 'https://reactrkfirebasegcp.firebaseapp.com',
-//   githublink: 'https://github.com/Rajiv-Khushiram/reactrk'
-// },{
-//   title: 'Hackathon 2019',
-//   description:
-//     `A prototype for grouping students in team projects. This project stacks React-Mongo-Db and hosting`,
-//   link: 'https://reactrkfirebasegcp.firebaseapp.com',
-//   githublink: 'https://github.com/Rajiv-Khushiram/reactrk'
-// },{
-//   title: 'Hackathon 2019',
-//   description:
-//     `A prototype for grouping students in team projects. This project stacks React-Mongo-Db and hosting`,
-//   link: 'https://reactrkfirebasegcp.firebaseapp.com',
-//   githublink: 'https://github.com/Rajiv-Khushiram/reactrk'
-// },{
-//   title: 'Hackathon 2019',
-//   description:
-//     `A prototype for grouping students in team projects. This project stacks React-Mongo-Db and hosting`,
-//   link: 'https://reactrkfirebasegcp.firebaseapp.com',
-//   githublink: 'https://github.com/Rajiv-Khushiram/reactrk'
-// }];
-
-// const useData = useBlog()
-
-// const blogs = useData();
 
 
 const Layout = props =>  {
@@ -79,7 +50,9 @@ const Layout = props =>  {
       console.log("fetched data");
       return query;
     })
-    .catch(err => setErrors(err));
+    .catch(err => {
+      console.log(err)
+    });
 
 
     // const res = await fetch("https://swapi.co/api/planets/4/");
@@ -100,6 +73,7 @@ const Layout = props =>  {
       link={blog.title}
       githublink={blog.title}
       key={blog.id}
+      timeToRead={blog.timeToRead}
     />
   ));
 
@@ -111,7 +85,7 @@ const Layout = props =>  {
   else {
     return (<React.Fragment>
     <br></br> <br></br>
-    <div style={{height:"100vh"}}>
+    <div style={{height:"80vh"}}>
     <p><Spin size="large" /> ...Loading blogs</p>
     </div></React.Fragment>
 
@@ -124,5 +98,37 @@ Layout.propTypes = {
   onEnter: PropTypes.func.isRequired,
   onLeave: PropTypes.func.isRequired,
 };
-
 export default Layout
+
+
+//  const [data, setData] = useBlog();
+
+// const Blogs = [  {
+//   title: 'Hackathon 2019',
+//   description:
+//     `A prototype for grouping students in team projects. This project stacks React-Mongo-Db and hosting`,
+//   link: 'https://reactrkfirebasegcp.firebaseapp.com',
+//   githublink: 'https://github.com/Rajiv-Khushiram/reactrk'
+// },{
+//   title: 'Hackathon 2019',
+//   description:
+//     `A prototype for grouping students in team projects. This project stacks React-Mongo-Db and hosting`,
+//   link: 'https://reactrkfirebasegcp.firebaseapp.com',
+//   githublink: 'https://github.com/Rajiv-Khushiram/reactrk'
+// },{
+//   title: 'Hackathon 2019',
+//   description:
+//     `A prototype for grouping students in team projects. This project stacks React-Mongo-Db and hosting`,
+//   link: 'https://reactrkfirebasegcp.firebaseapp.com',
+//   githublink: 'https://github.com/Rajiv-Khushiram/reactrk'
+// },{
+//   title: 'Hackathon 2019',
+//   description:
+//     `A prototype for grouping students in team projects. This project stacks React-Mongo-Db and hosting`,
+//   link: 'https://reactrkfirebasegcp.firebaseapp.com',
+//   githublink: 'https://github.com/Rajiv-Khushiram/reactrk'
+// }];
+
+// const useData = useBlog()
+
+// const blogs = useData();

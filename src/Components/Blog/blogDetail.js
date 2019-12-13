@@ -34,6 +34,10 @@ const Content = styled.div`
     flex-wrap: wrap;
     width: 80%;
   }
+
+  a {
+    color: blue;
+  }
 `;
 
 const BlogDetails = props => {

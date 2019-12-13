@@ -56,7 +56,7 @@ export const Navigation = props => (
     <TabItem to="home" text="Home" icon="home" />
     <TabItem to="about" text="About" icon="address-card" />
     <TabItem to="skillset" text="Skills Set" icon="superpowers" />
-    <TabItem to="projects" text="Projects" icon="folder" />
+    <TabItem to="projects" style={{color:"white"}} text="Projects" icon="folder" />
     <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1XwQY9m0Dlz9xJOrS2fVzlSOpFRDrwmn6/view" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
     
     <a  rel="noopener noreferrer" href="/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a>

@@ -30,14 +30,14 @@ class BlogRenew extends Component {
   render() {
     return (
       <React.Fragment>
+        
         <Header
           background={background2}
-          heading="Raj-K"
-          subtitle={"A diary of Learning"}
+          heading="Blog"
+          subtitle={"Tracks of a Developer"}
         />
        <Menu navigation/>
-
-        <Wrapper id="blogs">
+ <Wrapper id="blogs">
           <Title text="My Blog" icon="book" color="ff4f81" />
           <Layout
             onEnter={this.onEnter}
@@ -45,6 +45,7 @@ class BlogRenew extends Component {
             active={this.state.active}
           />
         </Wrapper>
+       
         <Footer background={background2} />
       </React.Fragment>
     );

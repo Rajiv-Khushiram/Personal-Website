@@ -20,6 +20,10 @@ const Wrapper = styled.div`
   }
 `;
 
+const TimeToRead = styled.div`
+  padding:15px;
+
+`
 const Title = styled.h1`
   font-family: Pacifico, Helvetica, sans-serif;
   text-align: center;
@@ -75,13 +79,14 @@ const Card = props => (
   <Wrapper>
     <Title>{props.title}</Title>
     <Description>{props.summary}</Description>
+    <TimeToRead><strong>{ " " }{props.timeToRead}</strong> {'  '}mins...  <i className="fa fa-hourglass"/> </TimeToRead>
     <ButtonWrapper>
       {props.title && (<Button href={"/blog/"+ props.title}>
         Read 
       </Button>)}
 
       {props.title && (<Button2 href={"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraj-c-k.web.app%2Fblog%2F"+props.title+"&amp;src=sdkpreparse"  }   target={props.title}>
-        Share
+      <i class="fa fa-facebook-f"></i> Share
       </Button2>)
       }
     </ButtonWrapper>
