@@ -47,7 +47,7 @@ class Menu extends Component {
     return (
       <React.Fragment>
         <WrapperLeft>
-          {/* <Raj/> */}
+          <Raj/>
         </WrapperLeft>
       <WrapperRight>
         <Hamburger active={this.state.active} onClick={this.hamburgerClicked} />

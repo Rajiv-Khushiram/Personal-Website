@@ -18,9 +18,15 @@ const RajLogo = styled.div`
   }
 `;
 
+const LogoText = styled.div`
+
+font-size: 18px;
+font-weight: bolder;
+`
+
 const Raj = props => (
     <Link style={{ textDecoration:"none", color: "black" }} to={"/"}>
-    <RajLogo>Raj</RajLogo></Link>
+    <RajLogo><LogoText>Rajiv K.</LogoText></RajLogo></Link>
 )
 
 export default Raj
