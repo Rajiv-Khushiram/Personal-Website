@@ -23,14 +23,14 @@ const SkillsetLink = styled.span`
 
 const Paragraph = props => (
   <Wrapper active={props.active}>
-    How is World? I'm a web developer with over 4 years of commercial experience in <strong> React </strong>and <strong>Java</strong> development. Currently at  <a
+    How is World? I'm a web developer with over 4 years of commercial experience in <strong> React </strong>and <strong>Java</strong> development. As a <strong>Full Stack JavaScript Developer</strong> at  <a
       href="https://sayi.do/"
       target="_blank"
       rel="noopener noreferrer"
       style={{ color: 'dodgerblue' }}
     >
      SAYI DO{' '}
-    </a>as a <strong>Full Stack JavaScript Developer</strong>, building serverless solutions running ReactJS and <strong>Cloud Functions</strong>. 
+    </a>I work with React and the <strong>AWS</strong> || <strong>GCP</strong> stack to provide serveless solutions. 
 
      You can check my{' '}
     <Link to="skillset" spy={true} smooth={true}>

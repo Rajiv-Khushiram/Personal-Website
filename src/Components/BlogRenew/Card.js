@@ -80,7 +80,7 @@ const Card = props => (
         Read 
       </Button>)}
 
-      {props.title && (<Button2 href={"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraj-c-k.web.app%2Fblog%2F"+props.title+"&amp;src=sdkpreparse"}   target={props.title}>
+      {props.title && (<Button2 href={"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraj-c-k.web.app%2Fblog%2F"+props.title+"&amp;src=sdkpreparse"  }   target={props.title}>
         Share
       </Button2>)
       }
