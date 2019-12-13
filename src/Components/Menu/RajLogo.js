@@ -18,6 +18,20 @@ const RajLogo = styled.div`
   }
 `;
 
+const BlogLogo = styled.div`
+  outline: none;
+  padding: 0;
+  position: fixed;
+  left: 120px;
+  top: 30px;
+  color:white;
+  animation: ${keyframes`${bounceInLeft}`} 1s;
+  z-index: 999;
+  @media (max-width: 580px) {
+    display: none;
+  }
+`;
+
 const LogoText = styled.div`
 
 font-size: 18px;
@@ -25,8 +39,11 @@ font-weight: bolder;
 `
 
 const Raj = props => (
+  <React.Fragment>
     <Link style={{ textDecoration:"none", color: "black" }} to={"/"}>
     <RajLogo><LogoText>Rajiv K.</LogoText></RajLogo></Link>
+        <Link style={{ textDecoration:"none", color: "black" }} to={"/blog"}>
+        <BlogLogo><LogoText>Blog</LogoText></BlogLogo></Link></React.Fragment>
 )
 
 export default Raj

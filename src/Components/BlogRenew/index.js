@@ -24,6 +24,9 @@ class BlogRenew extends Component {
   onLeave() {
     this.setState({ active: false });
   }
+  componentDidMount(){
+    window.document.title="MY BLOG -- Raj-K"
+  }
   render() {
     return (
       <React.Fragment>
@@ -35,7 +38,7 @@ class BlogRenew extends Component {
        <Menu navigation/>
 
         <Wrapper id="blogs">
-          <Title text="My Blogs" icon="book" color="ff4f81" />
+          <Title text="My Blog" icon="book" color="ff4f81" />
           <Layout
             onEnter={this.onEnter}
             onLeave={this.onLeave}
