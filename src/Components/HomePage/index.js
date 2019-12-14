@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../Header";
 import Menu from "../Menu";
 import About from "../About";
@@ -10,8 +10,14 @@ import BlogRenew from "../BlogRenew";
 
 import Footer from "../Footer";
 
-const HomePage = () => (
-  <div>
+const HomePage = () =>  {
+
+    useEffect(() => {
+      window.document.title="HOME -- Raj-K"
+    }, [])
+
+
+return ( <div>
     <Header
       background={background}
       heading="Raj-K"
@@ -29,5 +35,6 @@ const HomePage = () => (
     <Footer background={background} />
   </div>
 );
+}
 
 export default HomePage;

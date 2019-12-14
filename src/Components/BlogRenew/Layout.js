@@ -50,7 +50,7 @@ const Layout = props =>  {
     })
     .then(() => {
       setData(query);
-      console.log("fetched data");
+      // console.log("fetched data");
       return query;
     })
     .catch(err => {
