@@ -1,4 +1,4 @@
-import React , { useState, useEffect } from 'react';
+import React , { useState, useContext, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Waypoint from 'react-waypoint';
 import PropTypes from 'prop-types';
@@ -7,6 +7,7 @@ import Card from './Card';
 import { useFirestore } from "react-redux-firebase";
 import { Spin } from "antd";
 import bounceInLeft from 'react-animations/lib/bounce-in-left';
+import { PhotoContext } from '../../Context/PhotoPageContext'
 
 
 const Wrapper = styled.div`
@@ -24,6 +25,7 @@ const Layout = props =>  {
   const [data, setData] = useState([])
   const [errors, setErrors] = useState(false)
   const firestore = useFirestore();
+  const { blogInfo, someFunction } = useContext(PhotoContext);
   let query = [];  
 
   async function fetchData() {
@@ -67,6 +69,36 @@ const Layout = props =>  {
     fetchData();
   }, []);
 
+  function toDateTime(secs) {
+    var t = new Date(1970, 0, 1); // Epoch
+    t.setSeconds(secs);
+    return t;
+  }
+  
+  function formatDate(date) {
+    var monthNames = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ];
+    var weekday = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+    var dateValue = date.getDate();
+    var day = date.getDay();
+    var monthIndex = date.getMonth();
+    //var year = date.getFullYear();
+  
+    return weekday[day] + " " + dateValue + " " + monthNames[monthIndex];
+  }
+
   const Cards = data.map(blog => (
     <Card
       title={blog.id}
@@ -75,6 +107,8 @@ const Layout = props =>  {
       githublink={blog.title}
       key={blog.id}
       timeToRead={blog.timeToRead}
+      createdAt={formatDate(
+        toDateTime(blog.createdAt.seconds))}
     />
   ));
 

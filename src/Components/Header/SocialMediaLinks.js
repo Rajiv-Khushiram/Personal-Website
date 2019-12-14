@@ -23,12 +23,12 @@ const Wrapper = styled.div`
 const Link = styled.a`
   text-decoration: none;
   color: #fff;
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   text-align: center;
   transition: 0.2s;
   padding-top:20px;
@@ -56,7 +56,7 @@ const SocialMediaLinks = () => (
     <Link
       href="https://www.instagram.com/pro_coder/"
       target="_blank"
-      className="fa fa-instagram"
+      className="fa fa-instagram fa-2x"
     />
     {/* <Link
       href="https://snapchat.com/add/ahmedtarek2134"
@@ -66,12 +66,12 @@ const SocialMediaLinks = () => (
     <Link
       href="https://www.linkedin.com/in/rajiv-khushiram/"
       target="_blank"
-      className="fa fa-linkedin"
+      className="fa fa-linkedin fa-2x"
     />
     <Link
       href="https://github.com/Rajiv-Khushiram"
       target="_blank"
-      className="fa fa-github"
+      className="fa fa-github fa-2x"
     />
   </Wrapper>
 );

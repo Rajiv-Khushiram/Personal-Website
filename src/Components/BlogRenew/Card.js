@@ -77,6 +77,7 @@ const Button2 = styled.a`
 
 const Card = props => (
   <Wrapper>
+    <Description>{props.createdAt}</Description>
     <Title>{props.title}</Title>
     <Description>{props.summary}</Description>
     <TimeToRead><strong>{ " " }{props.timeToRead}</strong> {'  '}mins...  <i className="fa fa-hourglass"/> </TimeToRead>

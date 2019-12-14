@@ -45,6 +45,8 @@ const TabItem = props => (
   </Link>
 );
 
+
+
 TabItem.propTypes = {
   to: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
@@ -65,7 +67,7 @@ export const Navigation = props => (
   </Wrapper>
 );
 
-export const NavigationBlog = props => (
+export const NavigationBlog = props =>  (
   <Wrapper active={props.active}>
     <a  rel="noopener noreferrer" href="/" ><Tab style={{color:'white', textDecoration:'none'}}>Home<i className="fa fa-home"></i></Tab></a>
 

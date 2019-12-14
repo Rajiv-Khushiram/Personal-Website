@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import Title from "../SectionTitle";
 import Layout from "./Layout";
 import Wrapper from "../SectionWrapper";
@@ -34,10 +34,12 @@ class BlogRenew extends Component {
         <Header
           background={background2}
           heading="Blog"
-          subtitle={"Tracks of a Developer"}
+          subtitle={"of a Full Stack Web Dev"}
         />
-       <Menu navigation/>
- <Wrapper id="blogs">
+        <div id="menu">
+       <Menu navigation/></div>
+       <div id ="blogs">
+       <Wrapper >
           <Title text="My Blog" icon="book" color="ff4f81" />
           <Layout
             onEnter={this.onEnter}
@@ -45,7 +47,7 @@ class BlogRenew extends Component {
             active={this.state.active}
           />
         </Wrapper>
-       
+        </div>
         <Footer background={background2} />
       </React.Fragment>
     );
