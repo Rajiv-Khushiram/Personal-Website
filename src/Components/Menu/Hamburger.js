@@ -9,8 +9,6 @@ const HamburgerOuter = styled.div`
   outline: none;
   padding: 0;
   position: fixed;
-  background-color: purple;
-  color:yellow;
   right: 30px;
   top: 50px;
   animation: ${keyframes`${bounceInRight}`} 1s;
@@ -25,7 +23,6 @@ background-color:white;
 
   &::before,
   &::after {
-    background-color:yellow;
   }
 `;
 
