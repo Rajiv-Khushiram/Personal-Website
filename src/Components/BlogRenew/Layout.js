@@ -93,10 +93,11 @@ const Layout = props =>  {
     var weekday = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
     var dateValue = date.getDate();
     var day = date.getDay();
+    var year = date.getYear() + 1900;
     var monthIndex = date.getMonth();
     //var year = date.getFullYear();
   
-    return weekday[day] + " " + dateValue + " " + monthNames[monthIndex];
+    return  " " + dateValue + " " + monthNames[monthIndex] + " "+ year ;
   }
 
   const Cards = data.map(blog => (

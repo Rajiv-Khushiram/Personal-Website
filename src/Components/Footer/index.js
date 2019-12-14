@@ -45,6 +45,7 @@ const Footer = (props) => (
         <Link href="https://github.com/Rajiv-Khushiram" className="fa fa-github fa-3x" />
         <Link href="https://drive.google.com/file/d/1XwQY9m0Dlz9xJOrS2fVzlSOpFRDrwmn6/view" className="fa fa-file fa-3x" />
       </LinksWrapper>
+      <center> <h3 style={{color:"white"}}>Built with ReactJS  </h3></center>
     </div>
   </Wrapper>
 );

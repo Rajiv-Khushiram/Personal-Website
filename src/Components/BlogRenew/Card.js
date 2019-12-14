@@ -35,9 +35,16 @@ const Title = styled.h1`
 
 const Description = styled.p`
   line-height: 1.6;
-  height: 90px;
   display: flex;
   align-items: center;
+`;
+const Datela = styled.p`
+  line-height: 1.6;
+  display: flex;
+  align-items: right;
+  top: 0px;
+  font-style: italic;
+  color:grey;
 `;
 
 const ButtonWrapper = styled.div`
@@ -77,8 +84,8 @@ const Button2 = styled.a`
 
 const Card = props => (
   <Wrapper>
-    <Description>{props.createdAt}</Description>
-    <Title>{props.title}</Title>
+    <Datela>{props.createdAt}</Datela>
+    <Title  style={{float:"center"}}>{props.title}</Title>
     <Description>{props.summary}</Description>
     <TimeToRead><strong>{ " " }{props.timeToRead}</strong> {'  '}mins...  <i className="fa fa-hourglass"/> </TimeToRead>
     <ButtonWrapper>
