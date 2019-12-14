@@ -55,14 +55,15 @@ const BlogDetails = props => {
           iconWrapper
           subtitle={formatDate(toDateTime(blog.createdAt.seconds))}
         />
-                       <Menu navigation/>
+                        <div id="menu">
+   <Menu navigation/></div>
 
         {/* //{moment(blog.createdAt.toDate()).calendar()} */}
-        <ContentContainer>
+        <div id="blogs"> <ContentContainer>
           <Content id="about">
             <div dangerouslySetInnerHTML={{ __html: text }} />
           </Content>
-        </ContentContainer>
+        </ContentContainer></div>
         <Footer background={blog.background} />
       </div>
     );
