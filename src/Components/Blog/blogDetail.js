@@ -40,12 +40,15 @@ const Content = styled.div`
   }
 `;
 
+
+
 const BlogDetails = props => {
   const { blog } = props;
-
   //   if (!auth.uid) return <Redirect to='/signin' />
   if (blog) {
     const text = blog.content;
+    window.document.title=blog.title
+
     return (
       <div>
         <Header

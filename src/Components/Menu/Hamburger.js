@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { bounceInRight } from "react-animations";
 import PropTypes from "prop-types";
-import ReactDOM from "react-dom";
 
 const HamburgerOuter = styled.div`
   outline: none;
@@ -18,33 +17,35 @@ const HamburgerOuter = styled.div`
 `;
 
 const HamburgerInner = styled.div`
-  background-color: white;
-
-  &::before,
-  &::after {
+  && {
+    background-color: white; /* applied */
   }
-`;
+  &&:before {
+    background-color: white;
+  }
+  &&:after {
+    background-color: white;
+  }
+`;  
 
 const Hamburger = props => {
-  const [heightofWindow, setHeightOfWindow] = useState(window.innerHeight);
-
   useEffect(() => {
-    const handleScroll = async () => {
+    const handleScroll = () => {
       var a = document
         .querySelector(".hamburger-inner")
         .getBoundingClientRect();
       var b = document.querySelector("#blogs").getBoundingClientRect();
 
       if (b.top <= a.top + a.height && b.top + b.height > a.top) {
-        document.querySelector(".hamburger-inner").style.backgroundColor =
-          "black";
+        document.querySelector(".hamburger-inner").classList.add("greenMile");
         document
           .querySelector("#dynamicText")
           .style.setProperty("color", "black");
         document.querySelector("#logolink").style.setProperty("color", "black");
       } else {
-        document.querySelector(".hamburger-inner").style.backgroundColor =
-          "white";
+        document
+          .querySelector(".hamburger-inner")
+          .classList.remove("greenMile");
         document
           .querySelector("#dynamicText")
           .style.setProperty("color", "white");
@@ -53,7 +54,7 @@ const Hamburger = props => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("scroll", handleScroll);
     };
   });
 
@@ -66,7 +67,7 @@ const Hamburger = props => {
       onClick={props.onClick}
     >
       <div className="hamburger-box">
-        <HamburgerInner className="hamburger-inner" />
+        <HamburgerInner id="likimama" className="hamburger-inner" />
       </div>
     </HamburgerOuter>
   );

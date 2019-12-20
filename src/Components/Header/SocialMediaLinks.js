@@ -23,18 +23,16 @@ const Wrapper = styled.div`
 const Link = styled.a`
   text-decoration: none;
   color: #fff;
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2.6rem;
   text-align: center;
   transition: 0.2s;
-  padding-top:20px;
   &:hover {
-    width: 80px;
-    background-color: #212121;
+    transform: scale(1.3);
   }
   @media (max-width: 876px) {
     font-size: 1.3rem;
