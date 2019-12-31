@@ -9,7 +9,7 @@ const HamburgerOuter = styled.div`
   position: fixed;
   right: 30px;
   top: 50px;
-  animation: ${keyframes`${bounceInRight}`} 1s;
+  animation: ${keyframes`${bounceInRight}`} 3s;
   z-index: 999;
   @media (max-width: 580px) {
     display: none;

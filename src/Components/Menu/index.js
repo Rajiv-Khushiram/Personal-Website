@@ -40,12 +40,10 @@ handleNavigation = (e) => {
     const window = e.currentTarget;
 
     if (this.prev > window.scrollY) {
-        console.log("scrolling up");
         this.setState({showTopMenu : true})
 
 
     } else if (this.prev < window.scrollY) {
-        console.log("scrolling down");
         this.setState({showTopMenu : false})
 
 

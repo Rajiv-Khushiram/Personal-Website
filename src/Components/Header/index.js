@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { fadeInLeftBig } from 'react-animations';
 import MainText from './MainText';
 import SocialMediaLinks from './SocialMediaLinks';
 import AngleDown from './AngleDown';
@@ -15,6 +16,8 @@ const Outer = styled.div`
   text-align: center;
   color: #fff;
   background-size: cover;
+  position: relative;
+  animation: ${keyframes`${fadeInLeftBig}`} 1.4s;
   @media (max-width: 580px) {
     background-image: none;
     background-color: #111;

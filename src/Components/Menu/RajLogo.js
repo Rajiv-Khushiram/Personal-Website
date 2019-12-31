@@ -10,7 +10,7 @@ const RajLogo = styled.div`
   position: fixed;
   left: 30px;
   top: 60px;
-  animation: ${keyframes`${bounceInLeft}`} 1s;
+  animation: ${keyframes`${bounceInLeft}`} 3s;
   z-index: 999;
   @media (max-width: 580px) {
     display: none;
@@ -23,7 +23,7 @@ const BlogLogo = styled.div`
   position: fixed;
   left: 120px;
   top: 60px;
-  animation: ${keyframes`${bounceInLeft}`} 1s;
+  animation: ${keyframes`${bounceInLeft}`} 3s;
   z-index: 999;
   @media (max-width: 580px) {
     display: none;
