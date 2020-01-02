@@ -1,13 +1,13 @@
-import React , { useState, useContext, useEffect } from 'react';
+import React , { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Waypoint from 'react-waypoint';
 import PropTypes from 'prop-types';
-import { bounceInRight } from 'react-animations';
+// import { bounceInRight } from 'react-animations';
 import Card from './Card';
 import { useFirestore } from "react-redux-firebase";
 import { Spin } from "antd";
 import bounceInLeft from 'react-animations/lib/bounce-in-left';
-import { PhotoContext } from '../../Context/PhotoPageContext'
+// import { PhotoContext } from '../../Context/PhotoPageContext'
 
 
 const Wrapper = styled.div`
@@ -23,51 +23,53 @@ const Wrapper = styled.div`
 
 const Layout = props =>  {
   const [data, setData] = useState([])
-  const [errors, setErrors] = useState(false)
+  // const [errors, setErrors] = useState(false)
+  // const { blogInfo, someFunction } = useContext(PhotoContext);
   const firestore = useFirestore();
-  const { blogInfo, someFunction } = useContext(PhotoContext);
-  let query = [];  
 
-  async function fetchData() {
-    return firestore
-    .collection("blogs")
-    .orderBy("createdAt", "desc")
-    .get()
-    .then(snapshot => {
-      snapshot.forEach(doc => {
-        let blogObj = {};
-        blogObj = {
-          id: doc.id,
-          background: doc.data().background,
-          content: doc.data().content,
-          title: doc.data().title,
-          createdAt: doc.data().createdAt,
-          timeToRead: doc.data().timeToRead,
-          summary: doc.data().summary
-        };
-        query.push(blogObj);
+
+  useEffect(() => {
+    let query = [];  
+    const fetchData = async()  =>{
+      
+      return firestore
+      .collection("blogs")
+      .orderBy("createdAt", "desc")
+      .get()
+      .then(snapshot => {
+        snapshot.forEach(doc => {
+          let blogObj = {};
+          blogObj = {
+            id: doc.id,
+            background: doc.data().background,
+            content: doc.data().content,
+            title: doc.data().title,
+            createdAt: doc.data().createdAt,
+            timeToRead: doc.data().timeToRead,
+            summary: doc.data().summary
+          };
+          query.push(blogObj);
+        });
+      })
+      .then(() => {
+        setData(query);
+         console.log("fetched data");
+        return query;
+      })
+      .catch(err => {
+        console.log(err)
       });
-    })
-    .then(() => {
-      setData(query);
-      // console.log("fetched data");
-      return query;
-    })
-    .catch(err => {
-      console.log(err)
-    });
-
+    }
 
     // const res = await fetch("https://swapi.co/api/planets/4/");
     // res
     //   .json()
     //   .then(res => setData(res))
     //   .catch(err => setErrors(err));
-  }
+    
 
-  useEffect(() => {
     fetchData();
-  }, []);
+  }, [firestore]);
 
   function toDateTime(secs) {
     var t = new Date(1970, 0, 1); // Epoch
@@ -90,9 +92,9 @@ const Layout = props =>  {
       "Nov",
       "Dec"
     ];
-    var weekday = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+    // var weekday = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
     var dateValue = date.getDate();
-    var day = date.getDay();
+    // var day = date.getDay();
     var year = date.getYear() + 1900;
     var monthIndex = date.getMonth();
     //var year = date.getFullYear();

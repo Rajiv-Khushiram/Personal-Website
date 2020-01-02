@@ -6,7 +6,7 @@ import SkillSet from "../SkillSet";
 import Projects from "../Projects";
 //import Contact from './Components/Contact';
 import background from "../../Assets/background.jpg";
-import BlogRenew from "../BlogRenew";
+// import BlogRenew from "../BlogRenew";
 
 import Footer from "../Footer";
 

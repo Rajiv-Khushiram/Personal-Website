@@ -1,4 +1,4 @@
-import React, { Component, useContext } from "react";
+import React, { Component } from "react";
 import Title from "../SectionTitle";
 import Layout from "./Layout";
 import Wrapper from "../SectionWrapper";

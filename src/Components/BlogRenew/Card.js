@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import blogDetail from '../Blog/blogDetail';
+// import blogDetail from '../Blog/blogDetail';
 
 const width = 100 / 3;
 
