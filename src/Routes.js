@@ -9,6 +9,7 @@ import BlogDetails from "./Components/Blog/blogDetail";
 import CreateBlog from "./Components/Blog/CreateBlog";
 import SignIn from "./Components/Auth/SignIn";
 import BlogRenew from "./Components/BlogRenew"
+import MediumClap from "./Components/Playground"
 
 // import stateContext from "./Components/InfinityBlogLoader/Context"
 
@@ -31,6 +32,8 @@ class Routes extends Component {
           {/* <Route exact path="/Infinity/:id" component={IninityBlogLoader} /> */}
 
           <Route exact path="/blog/:id" component={BlogDetails} />
+          <Route exact path="/playground" component={MediumClap} />
+
           <ProtectedRoute
             exact path="/addBlog"
             isAllowed={auth.uid}

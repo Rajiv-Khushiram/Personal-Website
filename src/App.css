@@ -22,15 +22,21 @@
 }
 
 .greenMile {
-  background-color: grey !important;
+   background-color: #673ab7 !important;
+  border-bottom: 3px solid #673ab7;
+  border-top: 3px solid #673ab7;
+
+
 }
 
+
+
 .greenMile::before {
-  background-color: grey !important;
+  background-color: #673ab7 !important;
 }
 
 .greenMile::after {
-  background-color: grey !important;
+  background-color: #673ab7 !important;
 }
 
 .hamburger--collapse.is-active .hamburger-inner::before {

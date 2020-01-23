@@ -16,7 +16,7 @@ const HamburgerOuter = styled.div`
   }
 `;
 
-const HamburgerInner = styled.div`
+const   HamburgerInner = styled.div`
   && {
     background-color: white; /* applied */
   }
@@ -29,6 +29,7 @@ const HamburgerInner = styled.div`
 `;  
 
 const Hamburger = props => {
+  
   useEffect(() => {
     const handleScroll = () => {
       var a = document
@@ -38,18 +39,17 @@ const Hamburger = props => {
 
       if (b.top <= a.top + a.height && b.top + b.height > a.top) {
         document.querySelector(".hamburger-inner").classList.add("greenMile");
-        document
-          .querySelector("#dynamicText")
-          .style.setProperty("color", "black");
-        document.querySelector("#logolink").style.setProperty("color", "black");
+        document.querySelector(".projectla").classList.add("greenMile");
+
+
       } else {
+        
         document
           .querySelector(".hamburger-inner")
           .classList.remove("greenMile");
-        document
-          .querySelector("#dynamicText")
-          .style.setProperty("color", "white");
-        document.querySelector("#logolink").style.setProperty("color", "white");
+          document.querySelector(".projectla").classList.remove("greenMile");
+
+
       }
     };
     window.addEventListener("scroll", handleScroll);

@@ -37,7 +37,7 @@ class BlogRenew extends Component {
           subtitle={"of a Full Stack Web Dev"}
         />
         <div id="menu">
-       <Menu navigation/></div>
+       <Menu showProjectOnBLog={false} navigation/></div>
        <div id ="blogs">
        <Wrapper >
           <Title text="My Blog" icon="book" color="ff4f81" />

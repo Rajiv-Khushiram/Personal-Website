@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Hamburger from './Hamburger';
 import { Navigation, NavigationBlog } from './Navigation';
-import Raj from './RajLogo'
+import TopLeftConerMenu from './TopLeftCornerMenu'
 
 const WrapperRight = styled.nav`
   position: fixed;
@@ -10,10 +10,11 @@ const WrapperRight = styled.nav`
   top: 0;
 `;
 
-const WrapperLeft = styled.h3`
+const WrapperLeft = styled.div`
   position: fixed;
   left: 0;
   top: 0;
+  
 `;
 
 class Menu extends Component {
@@ -22,7 +23,8 @@ class Menu extends Component {
     this.state = {
       active: false,
       navigation: props.navigation,
-      showTopMenu: true
+      showTopMenu: true,
+      projectAppearonBlog : this.props.showProjectOnBLog,
     };
     this.hamburgerClicked = this.hamburgerClicked.bind(this);
   }
@@ -58,11 +60,14 @@ handleNavigation = (e) => {
   }
 
   render( ) {
+    const { projectAppearonBlog } = this.state;
+
+
     return (
       <React.Fragment>
         <div className={this.state.showTopMenu ? 'show' : 'hidden'}>
         <WrapperLeft>
-          <Raj/>
+         <TopLeftConerMenu onBlogsDissaper={projectAppearonBlog}/>
         </WrapperLeft>
       <WrapperRight>
         <Hamburger active={this.state.active} onClick={this.hamburgerClicked} />
