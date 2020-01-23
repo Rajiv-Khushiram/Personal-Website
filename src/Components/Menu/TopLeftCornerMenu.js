@@ -8,9 +8,14 @@ display: flex;
 direction: row;
 margin: px 0;
 padding:4px 30px;
+transition: 0.2s;
+
 border-right: 3px solid black;
+}
 
 &:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 3px 0px black;
   background-color:white;
   color: #673ab7;
 }

@@ -8,10 +8,22 @@ const Wrapper = styled.p`
   width: 70%;
   font-size: 19px;
   line-height: 1.6;
+  text-align:left;
+  padding: 30px;
+  text-indent: 50px;
+  border-radius:6px;
+  transition: 0.2s;
   animation: ${props => (props.active ? keyframes`${bounceInLeft}` : '')} 1s;
+
+  &:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+  }
+
   @media (max-width: 876px) {
     width: 100%;
     order: 1;
+    
   }
 `;
 
