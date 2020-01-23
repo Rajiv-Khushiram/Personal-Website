@@ -18,11 +18,11 @@ border-right: 3px solid black;
 const RajLogo = styled(ChildWrapper)`
 `
 
-const BlogLogo = styled.div`
+// const BlogLogo = styled.div`
 
 
 
-`;
+// `;
 
 const ProjectLogo = styled(ChildWrapper)`
  

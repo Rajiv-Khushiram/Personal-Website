@@ -105,12 +105,12 @@ font-size: 16px;`;
 const Clap = styled.div``;
 const Clicker = styled.div``;
 
-const SonarClap = styled.div``;
+// const SonarClap = styled.div``;
 
-const ParticlesContainer = styled.div``;
+// const ParticlesContainer = styled.div``;
 
-const Triangle = styled.div``;
-const Square = styled.div``;
+// const Triangle = styled.div``;
+// const Square = styled.div``;
 
 
 

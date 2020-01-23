@@ -67,20 +67,20 @@ const Button = styled.a`
   }
 `;
 
-const Button2 = styled.a`
-  text-decoration: none;
-  border: 1px solid #ff4f81;
-  color: #ff4f81;
-  padding: 15px 20px;
-  margin-left: 10px;
-  transition: 0.2s;
-  border-radius: 2px;
-  &:hover {
-    background-color:#ff4f81;
-    color: #fff;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  }
-`;
+// const Button2 = styled.a`
+//   text-decoration: none;
+//   border: 1px solid #ff4f81;
+//   color: #ff4f81;
+//   padding: 15px 20px;
+//   margin-left: 10px;
+//   transition: 0.2s;
+//   border-radius: 2px;
+//   &:hover {
+//     background-color:#ff4f81;
+//     color: #fff;
+//     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+//   }
+// `;
 
 const Card = props => (
   <Wrapper>

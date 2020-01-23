@@ -5,7 +5,7 @@ import { bounceInLeft } from 'react-animations';
 const Wrapper = styled.div`
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 41px;
   z-index: 999;
   display: -webkit-flex;
   display: flex;
@@ -18,6 +18,8 @@ const Wrapper = styled.div`
   -webkit-align-content: stretch;
   align-content: stretch;
   animation: ${keyframes`${bounceInLeft}`} 1s;
+      bottom: 41px;
+
 `;
 
 const Link = styled.a`
