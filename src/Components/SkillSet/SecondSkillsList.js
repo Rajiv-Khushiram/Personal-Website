@@ -22,6 +22,7 @@ const Wrapper = styled.ul`
   margin: 0;
   text-align: center;
   list-style: none;
+  z-index:-2;
   @media (max-width: 580px) {
     width: 100%;
     display: block;

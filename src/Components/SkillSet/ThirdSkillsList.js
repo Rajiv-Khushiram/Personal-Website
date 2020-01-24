@@ -29,6 +29,7 @@ const Wrapper = styled.ul`
     list-style: circle;
     padding-left: 5%;
   }
+  z-index:-2;
 `;
 
 const Item = styled.li`

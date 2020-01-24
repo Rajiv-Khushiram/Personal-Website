@@ -6,23 +6,26 @@ import { Link } from 'react-scroll';
 
 const Wrapper = styled.p`
   width: 70%;
-  font-size: 19px;
+  font-size: 22px;
   line-height: 1.6;
   text-align:left;
-  padding: 30px;
   text-indent: 50px;
-  border-radius:6px;
+  max-width:1100px;
+  padding:40px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+
+  border-radius:14px;
   transition: 0.2s;
   animation: ${props => (props.active ? keyframes`${bounceInLeft}` : '')} 1s;
-
   &:hover {
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
     transform: scale(1.1);
+
   }
 
   @media (max-width: 876px) {
     width: 100%;
     order: 1;
+    padding:30px
     
   }
 `;
@@ -35,14 +38,14 @@ const SkillsetLink = styled.span`
 
 const Paragraph = props => (
   <Wrapper active={props.active}>
-    How is World? I'm a web developer with over 4 years of commercial experience in <strong> React </strong>and <strong>Java</strong> development. As a <strong>Full Stack JavaScript Developer</strong> at  <a
+    <strong>Hello World!... </strong>, I'm a web developer with over 4 years of commercial experience in <strong> React </strong>and <strong>Java</strong> development. As a <strong>Full Stack JavaScript Developer</strong> at  <a
       href="https://sayi.do/"
       target="_blank"
       rel="noopener noreferrer"
       style={{ color: 'dodgerblue' }}
     >
-     SAYI DO{' '}
-    </a>I work with React and the <strong>AWS</strong> || <strong>GCP</strong> stack to provide serveless solutions. 
+     SAY I DO{' '}
+    </a>I work with React and the <strong>GCP</strong> || <strong>AWS</strong> stack to provide serveless solutions. 
 
      You can check my{' '}
     <Link to="skillset" spy={true} smooth={true}>

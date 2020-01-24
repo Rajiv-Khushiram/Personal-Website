@@ -16,15 +16,16 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   display: block;
-  margin: auto;
+  margin:auto;
+  margin-bottom: 30px;
   padding:10px;
   border-radius: 50%;
-  width: 150px;
+  width: 290px;
   transition: 0.2s;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   &:hover {
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
-    transform: scale(1.1);
+    box-shadow: none;
+
   }
 `;
 
