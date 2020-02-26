@@ -35,11 +35,12 @@
     "styled-components": "^2.4.0"
   },
   "scripts": {
-    "start": "node -r dotenv/config ./node_modules/.bin/react-scripts start dotenv_config_path=development.env",
+    "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
-  },
+  }
+  ,
   "eslintConfig": {
     "extends": "react-app"
   },
