@@ -14,9 +14,6 @@ steps:
         'REACT_APP_FIREBASE_MEASUREMENT_ID=${_REACT_APP_FIREBASE_MEASUREMENT_ID}',
 ] 
 
-- name: 'gcr.io/raj-c-k/firebase'
-  args: [use, default] 
-
 - name: 'gcr.io/cloud-builders/npm'
   dir: 'functions'
   args: ['install']
