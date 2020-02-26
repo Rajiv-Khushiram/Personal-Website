@@ -25,4 +25,7 @@ steps:
 
 # will not be overwrittenyea
 - name: 'gcr.io/raj-c-k/firebase'
-  args: [ 'deploy']
+  args: [ 'projects:list']
+
+# - name: 'gcr.io/raj-c-k/firebase'
+#   args: [ 'deploy']
