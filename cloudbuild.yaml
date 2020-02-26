@@ -25,4 +25,4 @@ steps:
 
 # will not be overwrittenyea
 - name: 'gcr.io/raj-c-k/firebase'
-  args: [ 'deploy', '--project', 'raj-c-k' , '--token', '[REACT_APP_FIREBASE_TOKEN]']
+  args: [ 'deploy']
