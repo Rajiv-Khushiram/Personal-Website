@@ -35,7 +35,7 @@
     "styled-components": "^2.4.0"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "node -r dotenv/config ./node_modules/.bin/react-scripts start dotenv_config_path=development.env",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
