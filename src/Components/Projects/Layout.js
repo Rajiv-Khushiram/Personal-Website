@@ -15,9 +15,15 @@ const Wrapper = styled.div`
 
 const Projects = [
   {
-    title: 'SMS-Global 2020',
+    title: `FB-Lite`,
     description:
-      `A Create-React-App making API calls to send a message and retrieve messages sent using OAuth 2.0 `,
+      `A MERN Stack APP using Express as Backend and Mongoose for API calls to MongoDB`,
+    githublink: 'https://github.com/Rajiv-Khushiram/FB-Lite'
+  },
+  {
+    title: `ReactJS, Context API, Axios & OAuth 2.0`,
+    description:
+      `A Create-React-App making API calls to send and retrieve messages sent using OAuth 2.0 `,
     githublink: 'https://github.com/Rajiv-Khushiram/SMS-Global-ReactJS-App'
   },
   {
@@ -25,7 +31,7 @@ const Projects = [
     description:
       `A prototype for grouping students in team projects. This project stacks React-Mongo-Db and hosting`,
     link: 'https://reactrkfirebasegcp.firebaseapp.com',
-    githublink: 'https://github.com/Rajiv-Khushiram/reactrk'
+    githublink: 'https://github.com/Rajiv-Khushiram/reactrk',
   },
   {
     title: 'Google Business Reviews-Project',
