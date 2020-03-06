@@ -38,15 +38,15 @@ const Item = styled.li`
 `;
 
 const skills = [
-  'NodeJS',
-  'Express',
-  'Spring',
-  'Flask',
-  'Django',
-  'Flask',
-  'RESTful APIs',
+  'NodeJS ✔️',
+  'RESTful APIs ✔️',
+  'Cloud Functions ✔️',
+  'Mongo/Mongoose ✔️',
   'PostgreSQL',
-  'MySQL & MongoDB',
+  'Spring ',
+  'Gulp',
+  'Gradle/Maven',
+
 ];
 
 const SkillItems = skills.map(skill => <Item key={skill}>{skill}</Item>);

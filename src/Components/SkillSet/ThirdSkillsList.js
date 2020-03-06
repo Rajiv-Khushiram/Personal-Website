@@ -38,13 +38,12 @@ const Item = styled.li`
 `;
 
 const skills = [
-  'Git',
-  'CI/CD',
-  'Firebase',
-  'Google Cloud Platform',
+  'Git ✔️',
+  'CI/CD ✔️',
+  'Firebase Suite ✔️',
+  'Google Cloud Platform ✔️',
+  'Containers ',
   'AWS',
-  'Containers',
-  'Cloud Functions',
   'Puppet',
   'Big Query',
   'Bash Scripting',

@@ -7,11 +7,11 @@ import { Link } from 'react-scroll';
 const Wrapper = styled.p`
   width: 70%;
   font-size: 22px;
-  line-height: 1.6;
   text-align:left;
-  text-indent: 50px;
+  text-indent: 20px;
   max-width:1100px;
   padding:40px;
+  line-height: 1.7;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
 
   border-radius:14px;
@@ -38,18 +38,19 @@ const SkillsetLink = styled.span`
 
 const Paragraph = props => (
   <Wrapper active={props.active}>
-    <strong>Hello World!... </strong>, I'm a web developer with over 4 years of commercial experience in <strong> React </strong>and <strong>Java</strong> development. As a <strong>Full Stack JavaScript Developer</strong> at  <a
+    <strong>Hello World!... </strong> I'm <strong>Rajiv</strong>,  a web developer with over <strong>4</strong> years of commercial experience in <strong> Java, Python </strong>and <strong>JavaScript</strong> development.
+    <br/> Currently a <strong>Full Stack JavaScript Developer</strong> at  <a
       href="https://sayi.do/"
       target="_blank"
       rel="noopener noreferrer"
       style={{ color: 'dodgerblue' }}
     >
      SAY I DO{' '}
-    </a>I work with React and the <strong>GCP</strong> || <strong>AWS</strong> stack to provide serveless solutions. 
+    </a>using the <strong>GCP</strong> and  <strong>AWS</strong>. {' '}
 
-     You can check my{' '}
+     See my{' '}
     <Link to="skillset" spy={true} smooth={true}>
-      <SkillsetLink>skills here</SkillsetLink>
+      <SkillsetLink>skills</SkillsetLink>
     </Link>{' '}
     and be sure to check out my{' '}
     <a
@@ -66,7 +67,7 @@ const Paragraph = props => (
       rel="noopener noreferrer"
       style={{ color: 'dodgerblue' }}
     >
-      blog
+      blog.
     </a>{' '}
 
     {/* and{' '}
