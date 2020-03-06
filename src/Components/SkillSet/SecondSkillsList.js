@@ -42,6 +42,7 @@ const skills = [
   'RESTful APIs ✔️',
   'Cloud Functions ✔️',
   'Mongo/Mongoose ✔️',
+  'MailJet ✔️',
   'PostgreSQL',
   'Spring ',
   'Gulp',

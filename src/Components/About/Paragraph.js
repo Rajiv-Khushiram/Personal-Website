@@ -46,7 +46,7 @@ const Paragraph = props => (
       style={{ color: 'dodgerblue' }}
     >
      SAY I DO{' '}
-    </a>using the <strong>GCP</strong> and  <strong>AWS</strong>. {' '}
+    </a>using  <strong>GCP</strong> and  <strong>AWS</strong> cloud services.{' '}
 
      See my{' '}
     <Link to="skillset" spy={true} smooth={true}>

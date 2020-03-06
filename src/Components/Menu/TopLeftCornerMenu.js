@@ -69,7 +69,7 @@ const TopNavLinks = (props, onBlogsDissaper ) => (
     </Link>
     <Link  to={"/blog"}>
         <ChildWrapper className="navWrap"  >
-        Blogs
+        Blog
         </ChildWrapper>
     </Link>
     {!onBlogsDissaper && 
