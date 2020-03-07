@@ -54,6 +54,14 @@ const Paragraph = props => (
     </Link>{' '}
     and be sure to check out my{' '}
     <a
+      href="https://drive.google.com/file/d/1XwQY9m0Dlz9xJOrS2fVzlSOpFRDrwmn6/view"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: 'dodgerblue' }}
+    >
+      Resume,
+    </a>{' '}
+    <a
       href="https://github.com/Rajiv-Khushiram"
       target="_blank"
       rel="noopener noreferrer"

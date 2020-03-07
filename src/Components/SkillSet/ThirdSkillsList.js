@@ -42,12 +42,10 @@ const skills = [
   'CI/CD ✔️',
   'Firebase Suite ✔️',
   'Google Cloud Platform ✔️',
-  'Containers ',
+  'Cloud Run',
+  'Containers',
   'AWS',
-  'Puppet',
   'Big Query',
-  'Bash Scripting',
-  'Camunda BPMS',
 ];
 
 const SkillItems = skills.map(skill => <Item key={skill}>{skill}</Item>);
