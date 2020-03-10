@@ -54,12 +54,12 @@ const Paragraph = props => (
     </Link>{' '}
     and be sure to check out my{' '}
     <a
-      href="https://drive.google.com/file/d/1XwQY9m0Dlz9xJOrS2fVzlSOpFRDrwmn6/view"
+      href="https://drive.google.com/file/d/1hy49QqsIWamq2oHomZ6ZOQZm-oNCL2uP/view"
       target="_blank"
       rel="noopener noreferrer"
       style={{ color: 'dodgerblue' }}
     >
-      Resume,
+      resume,
     </a>{' '}
     <a
       href="https://github.com/Rajiv-Khushiram"
