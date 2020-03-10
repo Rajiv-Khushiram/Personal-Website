@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes }  from 'styled-components';
+import 'antd/dist/antd.css';
+import { Button } from 'antd';
+import { bounceInDown } from 'react-animations';
 import MainText from './MainText';
 import SocialMediaLinks from './SocialMediaLinks';
 import AngleDown from './AngleDown';
+
 
 const Outer = styled.div`
   height: ${props => props.blog ? "40vh" : "100vh"  };
@@ -10,6 +14,7 @@ const Outer = styled.div`
   min-height: 400px;
   width: 100vw;
   display: flex;
+  flex-direction:column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -20,6 +25,14 @@ const Outer = styled.div`
     background-color: #111;
   }
 `;
+
+const ButtonWrapper = styled(Button)`
+  z-index:1;
+  margin-top:10px;
+  font-family:Raleway,Arial,Helvetica,sans-serif;
+  font-size:30px;
+  animation: ${keyframes`${bounceInDown}`} 2s;
+`
 
 const IconsWrapper = styled.div`
   min-height: 400px;
@@ -51,6 +64,9 @@ class Header extends Component {
     return (
       <Outer background={this.state.background} blog={this.state.blog} id="home" onMouseMove={this.outerHovered}>
         <MainText heading={this.props.heading} subtitle={this.state.subtitle} left={this.state.left} top={this.state.top} />
+        <ButtonWrapper size="large">
+          Resume
+        </ButtonWrapper>
         <IconsWrapper iconsWrapper={this.state.iconsWrapper}>
           <SocialMediaLinks />
           <AngleDown />
