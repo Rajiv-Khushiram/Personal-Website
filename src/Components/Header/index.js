@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled, { keyframes }  from 'styled-components';
-import 'antd/dist/antd.css';
 import { Button } from 'antd';
 import { bounceInDown } from 'react-animations';
 import MainText from './MainText';
@@ -28,9 +27,9 @@ const Outer = styled.div`
 
 const ButtonWrapper = styled(Button)`
   z-index:1;
-  margin-top:10px;
+  margin-top:20px;
   font-family:Raleway,Arial,Helvetica,sans-serif;
-  font-size:30px;
+  font-size:26px;
   animation: ${keyframes`${bounceInDown}`} 2s;
 `
 
@@ -64,9 +63,9 @@ class Header extends Component {
     return (
       <Outer background={this.state.background} blog={this.state.blog} id="home" onMouseMove={this.outerHovered}>
         <MainText heading={this.props.heading} subtitle={this.state.subtitle} left={this.state.left} top={this.state.top} />
-        <ButtonWrapper size="large">
+        <a href="https://drive.google.com/file/d/1hy49QqsIWamq2oHomZ6ZOQZm-oNCL2uP/view" target="_blank" rel="noopener noreferrer"><ButtonWrapper size="large"> 
           Resume
-        </ButtonWrapper>
+        </ButtonWrapper></a>
         <IconsWrapper iconsWrapper={this.state.iconsWrapper}>
           <SocialMediaLinks />
           <AngleDown />
