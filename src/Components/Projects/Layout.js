@@ -20,14 +20,19 @@ const Projects = [
     link: "https://sayi.do/"
   },
   {
+    title: `Weather-Widget-App`,
+    description: ` A prototype app which displays your weather for the week similar to google's weather search result`,
+    link: "https://weather-widget-app-e9668.firebaseapp.com/",
+    githublink: "https://github.com/Rajiv-Khushiram/Weather-Widget-App"
+  },
+  {
     title: "Reviews-App",
     description:
       "A prototype project which engages customers in submitting a review to generate customer trust and track performance of sales agents",
     link: "https://rajivkhushiram-reviews-project.firebaseapp.com/",
     githublink: "https://github.com/Rajiv-Khushiram/Reviews-App-For-Business"
-
-    
   },
+
   {
     title: "SMS-Global App",
     description: `A prototype app to send SMS using SMS-Global API keys. Simply insert you API keys and send messages
