@@ -63,7 +63,7 @@ class Header extends Component {
     return (
       <Outer background={this.state.background} blog={this.state.blog} id="home" onMouseMove={this.outerHovered}>
         <MainText heading={this.props.heading} subtitle={this.state.subtitle} left={this.state.left} top={this.state.top} />
-        <a href="https://drive.google.com/file/d/1cIji6tkznHoGmDc78zkWS5mVeiJngvZD/view" target="_blank" rel="noopener noreferrer"><ButtonWrapper size="large"> 
+        <a href="https://drive.google.com/open?id=1VSfdj5umIQRychDgcT0KPn0FPB7cqCwq" target="_blank" rel="noopener noreferrer"><ButtonWrapper size="large"> 
           Resume
         </ButtonWrapper></a>
         <IconsWrapper iconsWrapper={this.state.iconsWrapper}>
