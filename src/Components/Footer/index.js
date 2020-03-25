@@ -43,7 +43,7 @@ const Footer = (props) => (
         <Link href="https://www.instagram.com/pro_coder/" className="fa fa-instagram fa-3x" />
         <Link href="https://www.linkedin.com/in/rajiv-khushiram/" className="fa  fa-linkedin fa-3x" />
         <Link href="https://github.com/Rajiv-Khushiram" className="fa fa-github fa-3x" />
-        <Link href="https://drive.google.com/open?id=1A2lvI8pMncs4GRtazdZX1mLf7PifkJQ3" className="fa fa-file fa-3x" />
+        <Link href="https://drive.google.com/file/u/2/d/1CH6nlGxXqoe69qsXTPzpU7lhIlD-W088/view?usp=drive_open" className="fa fa-file fa-3x" />
       </LinksWrapper>
       <center> <h3 style={{color:"white"}}>Built with ReactJS  </h3></center>
     </div>

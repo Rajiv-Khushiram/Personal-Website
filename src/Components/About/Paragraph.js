@@ -54,7 +54,7 @@ const Paragraph = props => (
     </Link>{' '}
     and be sure to check out my{' '}
     <a
-      href="https://drive.google.com/open?id=1A2lvI8pMncs4GRtazdZX1mLf7PifkJQ3"
+      href="https://drive.google.com/file/u/2/d/1CH6nlGxXqoe69qsXTPzpU7lhIlD-W088/view?usp=drive_open"
       target="_blank"
       rel="noopener noreferrer"
       style={{ color: 'dodgerblue' }}

@@ -59,7 +59,7 @@ export const Navigation = props => (
     <TabItem to="about" text="About" icon="address-card" />
     <TabItem to="skillset" text="Skills Set" icon="superpowers" />
     <TabItem to="projects" style={{color:"white"}} text="Projects" icon="folder" />
-    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/open?id=1A2lvI8pMncs4GRtazdZX1mLf7PifkJQ3" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/u/2/d/1CH6nlGxXqoe69qsXTPzpU7lhIlD-W088/view?usp=drive_open" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
     
     <a  rel="noopener noreferrer" href="/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a>
 
@@ -71,7 +71,7 @@ export const NavigationBlog = props =>  (
   <Wrapper active={props.active}>
     <a  rel="noopener noreferrer" href="/" ><Tab style={{color:'white', textDecoration:'none'}}>Home<i className="fa fa-home"></i></Tab></a>
 
-    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/open?id=1A2lvI8pMncs4GRtazdZX1mLf7PifkJQ3" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/u/2/d/1CH6nlGxXqoe69qsXTPzpU7lhIlD-W088/view?usp=drive_open" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
     
     <a  rel="noopener noreferrer" href="/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a>
 
