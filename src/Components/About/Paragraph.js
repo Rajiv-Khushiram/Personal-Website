@@ -67,16 +67,16 @@ const Paragraph = props => (
       rel="noopener noreferrer"
       style={{ color: 'dodgerblue' }}
     >
-      github
+      github.
     </a>{' '}
-    and{' '}
+    {/* and{' '}
     <a
       href="/blog"
       rel="noopener noreferrer"
       style={{ color: 'dodgerblue' }}
     >
       blog.
-    </a>{' '}
+    </a>{' '} */}
 
     {/* and{' '}
     <a

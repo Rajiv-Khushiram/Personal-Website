@@ -61,7 +61,7 @@ export const Navigation = props => (
     <TabItem to="projects" style={{color:"white"}} text="Projects" icon="folder" />
     <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/u/2/d/1CH6nlGxXqoe69qsXTPzpU7lhIlD-W088/view?usp=drive_open" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
     
-    <a  rel="noopener noreferrer" href="/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a>
+    {/* <a  rel="noopener noreferrer" href="/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a> */}
 
     {/* <TabItem to="contact" text="Contact" icon="phone" /> */}
   </Wrapper>
@@ -73,7 +73,7 @@ export const NavigationBlog = props =>  (
 
     <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/u/2/d/1CH6nlGxXqoe69qsXTPzpU7lhIlD-W088/view?usp=drive_open" ><Tab style={{color:'white'}}>Resume<i className="fa fa-file"></i></Tab></a>
     
-    <a  rel="noopener noreferrer" href="/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a>
+    {/* <a  rel="noopener noreferrer" href="/blog" ><Tab style={{color:'white', textDecoration:'none'}}>Blog<i className="fa fa-file-code-o"></i></Tab></a> */}
 
     </Wrapper>
 );
