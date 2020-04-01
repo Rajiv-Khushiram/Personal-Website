@@ -10,7 +10,7 @@ const Wrapper = styled.p`
   text-align:left;
   text-indent: 20px;
   max-width:1100px;
-  padding:40px;
+  padding:20px;
   line-height: 1.7;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
 
@@ -18,7 +18,7 @@ const Wrapper = styled.p`
   transition: 0.2s;
   animation: ${props => (props.active ? keyframes`${bounceInLeft}` : '')} 1s;
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.009);
 
   }
 

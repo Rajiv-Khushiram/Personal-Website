@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled, { keyframes }  from 'styled-components';
 import { Button } from 'antd';
-import { bounceInDown } from 'react-animations';
+import { bounceInUp } from 'react-animations';
 import MainText from './MainText';
 import SocialMediaLinks from './SocialMediaLinks';
 import AngleDown from './AngleDown';
@@ -30,7 +30,7 @@ const ButtonWrapper = styled(Button)`
   margin-top:20px;
   font-family:Raleway,Arial,Helvetica,sans-serif;
   font-size:26px;
-  animation: ${keyframes`${bounceInDown}`} 2s;
+  animation: ${keyframes`${bounceInUp}`} 1.5s;
 `
 
 const IconsWrapper = styled.div`
