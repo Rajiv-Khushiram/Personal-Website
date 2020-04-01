@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Waypoint from 'react-waypoint';
 import PropTypes from 'prop-types';
-import { bounceInRight } from 'react-animations';
+import { fadeInRight, fadeOutLeft } from 'react-animations';
 import Card from './Card';
 
 const Wrapper = styled.div`
@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin: 3% 0;
-  animation: ${props => (props.active ? keyframes`${bounceInRight}` : '')} 1s;
+  animation: ${props => (props.active ? keyframes`${fadeInRight}` : keyframes`${fadeOutLeft}`)} 1.0s;
 `;
 
 const Projects = [
