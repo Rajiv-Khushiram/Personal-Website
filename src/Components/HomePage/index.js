@@ -13,7 +13,7 @@ import Footer from "../Footer";
 const HomePage = () =>  {
 
     useEffect(() => {
-      window.document.title="HOME -- Raj-K"
+      window.document.title="Rajiv Khushiram"
     }, [])
 
 
