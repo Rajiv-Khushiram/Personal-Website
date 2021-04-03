@@ -23,7 +23,7 @@ steps:
   args: ['install']
 
 - name: 'gcr.io/raj-c-k/firebase'
-  args: [target:apply, hosting, production, rajiv-c-k] 
+  args: [target:apply, hosting, production, raj-c-k] 
 
 - name: 'gcr.io/raj-c-k/firebase'
-  args: [deploy, --only] 
+  args: [deploy] 
