@@ -89,7 +89,7 @@ const Card = props => (
     <Description>{props.summary}</Description>
     <TimeToRead><strong>{ " " }{props.timeToRead}</strong> {'  '}mins...  <i className="fa fa-hourglass"/> </TimeToRead>
     <ButtonWrapper>
-      {props.title && (<Button href={"/blog/"+ props.title}>
+      {props.title && (<Button href={"/blog/"+props.title}>
         Read 
       </Button>)}
 

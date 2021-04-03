@@ -1,5 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/npm'
+  args: ['install', '-g',  'firebase-tools']
+
+- name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 
 - name: 'gcr.io/cloud-builders/npm'
@@ -12,10 +15,8 @@ steps:
         'REACT_APP_FIREBASE_SENDER_ID=${_REACT_APP_FIREBASE_SENDER_ID}',
         'REACT_APP_FIREBASE_APP_ID=${_REACT_APP_FIREBASE_APP_ID}',    
         'REACT_APP_FIREBASE_MEASUREMENT_ID=${_REACT_APP_FIREBASE_MEASUREMENT_ID}',
+        'REACT_APP_FIREBASE_TOKEN=${_REACT_APP_FIREBASE_TOKEN}',
 ] 
-
-- name: 'gcr.io/raj-c-k/firebase'
-  args: [use, default] 
 
 - name: 'gcr.io/cloud-builders/npm'
   dir: 'functions'

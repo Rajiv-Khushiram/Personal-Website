@@ -20,8 +20,8 @@ border-right: 3px solid black;
   color: #673ab7;
 }
 `
-const RajLogo = styled(ChildWrapper)`
-`
+// const RajLogo = styled(ChildWrapper)`
+// `
 
 // const BlogLogo = styled.div`
 
@@ -62,15 +62,15 @@ const TopNavLinks = (props, onBlogsDissaper ) => (
     <ParentLogo className="projectla
     ">
     <Link to={"/"}>
-        <RajLogo className="navWrap">
+        {/* <RajLogo className="navWrap">
         Rajiv
-        </RajLogo>
+        </RajLogo> */}
  
     </Link>
     <Link  to={"/blog"}>
-        <ChildWrapper className="navWrap"  >
-        Blogs
-        </ChildWrapper>
+        {/* <ChildWrapper className="navWrap"  >
+        Blog
+        </ChildWrapper> */}
     </Link>
     {!onBlogsDissaper && 
     <a href='#projects'>
