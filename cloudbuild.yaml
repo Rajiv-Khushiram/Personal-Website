@@ -24,6 +24,7 @@ steps:
 
 - name: 'gcr.io/raj-c-k/firebase'
   args: [target:apply, hosting, production, raj-c-k] 
+  timeout: 660s
 
 - name: 'gcr.io/raj-c-k/firebase'
   args: [deploy] 
