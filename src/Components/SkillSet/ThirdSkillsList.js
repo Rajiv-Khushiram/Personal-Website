@@ -46,6 +46,13 @@ const skills = [
   'Containers',
   'AWS',
   'Big Query',
+  'New Relic',
+  'Jenkins',
+  'Cloud build',
+  'EC2 Instances',
+  'AWS Cloudwatch',
+  'AWS SQS',
+  'AWS SNS',
 ];
 
 const SkillItems = skills.map(skill => <Item key={skill}>{skill}</Item>);
