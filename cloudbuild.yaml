@@ -4,6 +4,8 @@ steps:
 
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
+  timeout: 655s
+
 
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run','build'] 
@@ -24,7 +26,7 @@ steps:
 
 - name: 'gcr.io/raj-c-k/firebase'
   args: [target:apply, hosting, production, raj-c-k] 
-  timeout: 660s
+  timeout: 655s
 
 - name: 'gcr.io/raj-c-k/firebase'
-  args: [deploy] 
+  args: [deploy, --only, hosting:production] 
