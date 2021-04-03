@@ -22,8 +22,7 @@ steps:
   args: ['install']
 
 - name: 'gcr.io/raj-c-k/firebase'
-  args: [target:apply, hosting, production, raj-c-k] 
+  args: [target:apply, hosting, staging, rajiv-c-k] 
 
-# will not be overwrittenyea
 - name: 'gcr.io/raj-c-k/firebase'
-  args: [deploy, --debug] 
+  args: [deploy, --only, hosting:staging] 
