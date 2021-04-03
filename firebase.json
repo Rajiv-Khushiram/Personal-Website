@@ -32,13 +32,29 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "headers": [
+      { "source":"/service-worker.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}] }
+    ],
     "rewrites": [
+      {
+        "source": "/r/**",
+        "function": "api"
+      },
+      {
+        "source": "/photo/**",
+        "function": "api"
+      },
       {
         "source": "**",
         "destination": "/index.html"
+      },
+      {
+        "source": "/api/**",
+        "function": "api"
       }
     ]
-  }],
+  }]
+  ,
   "storage": {
     "rules": "storage.rules"
   }
