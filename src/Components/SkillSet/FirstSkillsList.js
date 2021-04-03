@@ -26,18 +26,14 @@ const Item = styled.li`
 `;
 
 const skills = [
-  'React',
-  'React hooks',
-  'React Context API',
-  'CSS3',
-  'JQuery',
+  'ReactJS ✔️',
+  'HTML/CSS/JavaScript ✔️',
+  'Redux ✔️',
+  'JQuery ✔️',
   'Webpack',
   'Bootstrap',
   'Semantic-UI',
   'Ant-Design',
-  'Gulp',
-  'Package Managers',
-  'Typescript',
 ];
 
 const SkillItems = skills.map(skill => <Item key={skill}>{skill}</Item>);

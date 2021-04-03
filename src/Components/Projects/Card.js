@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 const width = 100 / 3;
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   width: ${width - 4}%;
   min-width: 300px;
   min-height: 300px;
@@ -20,7 +22,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: Pacifico, Helvetica, sans-serif;
+  font-family: Raleway,Arial,Helvetica,sans-serif;
   text-align: center;
   font-size: 2.0rem;
   @media (max-width: 580px) {
@@ -29,15 +31,12 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  line-height: 1.6;
-  height: 90px;
-  display: flex;
-  align-items: center;
+  text-align:left;
+  line-height: 1.7;
 `;
 
 const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: center;
+  padding: 15px 0;
 `;
 
 const Button = styled.a`
@@ -69,18 +68,27 @@ const Button2 = styled.a`
   }
 `;
 
+const UpperWrapper = styled.div`
+flex: 1 0 auto;
+`
+
 const Card = props => (
   <Wrapper>
-    <Title>{props.title}</Title>
-    <Description>{props.description}</Description>
+    <UpperWrapper>
+      <Title>{props.title}</Title>
+      <Description>{props.description}</Description>
+    </UpperWrapper>
     <ButtonWrapper>
-      
-      {props.link && (<Button href={props.link} target="_blank">
-        Website
-      </Button>)}
-      {props.githublink && (<Button2 href={props.githublink} target="_blank">
-        Github
-      </Button2>)}
+      {props.link && (
+        <Button href={props.link} target="_blank">
+          Website
+        </Button>
+      )}
+      {props.githublink && (
+        <Button2 href={props.githublink} target="_blank">
+          Github
+        </Button2>
+      )}
     </ButtonWrapper>
   </Wrapper>
 );
